@@ -40,5 +40,5 @@ DarkRP.createEntity("Test", {
     price = 0,
     max = 1,
     cmd = "/buybath",
-    allowed = {TEAM_ADMIN}'
+    allowed = {TEAM_ADMIN}
 })
