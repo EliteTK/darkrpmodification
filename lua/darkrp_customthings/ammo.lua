@@ -116,7 +116,7 @@ DarkRP.createAmmoType("357", {
     customCheck = function(ply) return ply:Team() == TEAM_GUN end
 })
 
-DarkRP.createAmmoType("AirboatGun_ammo", {
+DarkRP.createAmmoType("#AirboatGun_ammo", {
     name = "Test winchester ammo.",
     model = "models/Items/BoxBuckshot.mdl",
     price = 0,

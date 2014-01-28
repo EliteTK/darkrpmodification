@@ -1,4 +1,4 @@
-local url = "http://bringvictory.com/"
+local url = ""
 local tabName = "Donations"
 
 
