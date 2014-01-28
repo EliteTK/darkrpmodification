@@ -308,6 +308,19 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
         NeedToChangeFrom = TEAM_CITIZEN,
      })
      
+     TEAM_FREERUNNER = DarkRP.createJob("Free runner", {
+        color = Color(62, 0, 0, 255),
+        model = "models/player/Group03/Male_01.mdl",
+        description = [[Jump from building to building]],
+        weapons = {"climb_swep2"},
+        command = "freerunner",
+        max = 3,
+        salary = 55,
+        admin = 0,
+        vote = false,
+        hasLicense = false,
+     })
+     
      
 
 /*---------------------------------------------------------------------------
