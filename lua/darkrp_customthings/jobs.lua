@@ -296,8 +296,8 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
      
      TEAM_ZOMBIE = DarkRP.createJob("Zombie", {
         color = Color(100, 0, 0, 255),
-        model = "models/player/zombie.mdl",
-        description = [[BLEEEHGGGHH]],
+        model = "models/player/eli.mdl",
+        description = [[Bleh. You are a zombie.]],
         weapons = {"m9k_knife"},
         command = "bleh",
         max = 0,
@@ -309,7 +309,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
      })
      
      TEAM_FREERUNNER = DarkRP.createJob("Free runner", {
-        color = Color(62, 0, 0, 255),
+        color = Color(62, 132, 166, 255),
         model = "models/player/Group03/Male_01.mdl",
         description = [[Jump from building to building]],
         weapons = {"climb_swep2"},
