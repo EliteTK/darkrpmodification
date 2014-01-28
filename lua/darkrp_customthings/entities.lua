@@ -1,3 +1,4 @@
+--[[
 -----------------------------------------------------------------------------
 /*---------------------------------------------------------------------------
 DarkRP custom entities
@@ -14,3 +15,21 @@ https://github.com/FPtje/DarkRP/blob/master/gamemode/config/addentities.lua#L111
 
 Add entities under the following line:
 ---------------------------------------------------------------------------*/
+--]]
+--
+DarkRP.createEntity("Rifle Ammo", {
+	ent = "m9k_ammo_ar2",
+	model = "models/Items/BoxMRounds.mdl",
+	price = 0,
+	max = 5,
+	cmd = "/buyrifleammo",
+})
+
+DarkRP.createEntity("Health vial", {
+    ent = "item_healthvial",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 50,
+    max = 10,
+    cmd = "/buyhealth",
+    customCheck = function (ply) ply:Team() == TEAM_MEDIC end,
+})
