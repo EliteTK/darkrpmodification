@@ -11,6 +11,28 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
 
 -- Additional note - we need to make sure we're spawning the right entity.
 -- We also don't need to be using all these fields.
+
+
+    AddCustomShipment("Medical kits", {
+        model = "models/Items/healthkit.mdl", 
+        entity = "item_healthkit", -- Check this in server files.
+        price = 750,
+        amount = 10,
+        separate = false, 
+        pricesep = 100, 
+        noship = false, 
+        allowed = {TEAM_MEDIC},
+        shipmodel = "models/items/item_item_crate.mdl",
+        weight = 15, 
+        buttonColor = Color(255, 255, 255, 255), 
+        label = "Medical kits",
+        
+        shipmentClass = "spawned_shipment",
+        onBought = function(ply, shipment, ent) end,
+        getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    })
+
+
     AddCustomShipment("Pistol ammo", {
         model = "models/Items/BoxSRounds.mdl", 
         entity = "m9k_ammo_pistol", -- Check this in server files.
