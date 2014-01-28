@@ -35,7 +35,7 @@ DarkRP.createEntity("Health vial", {
 })
 
 DarkRP.createEntity("Test", {
-    emt = "test_entity",
+    ent = "test_entity",
     model = "models/props_interiors/BathTub01a.mdl",
     price = 0,
     max = 1,
