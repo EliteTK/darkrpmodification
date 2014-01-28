@@ -296,7 +296,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
      
      TEAM_ZOMBIE = DarkRP.createJob("Zombie", {
         color = Color(100, 0, 0, 255),
-        model = "models/player/classic.mdl",
+        model = "models/player/zombie.mdl",
         description = [[BLEEEHGGGHH]],
         weapons = {"m9k_knife"},
         command = "bleh",
