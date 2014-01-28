@@ -31,5 +31,14 @@ DarkRP.createEntity("Health vial", {
     price = 50,
     max = 10,
     cmd = "/buyhealth",
-    customCheck = function (ply) ply:Team() == TEAM_MEDIC end,
+    allowed = {TEAM_GUN}
+})
+
+DarkRP.createEntity("Test", {
+    emt = "test_entity",
+    model = "models/props_interiors/BathTub01a.mdl",
+    price = 0,
+    max = 1,
+    cmd = "/buybath",
+    allowed = {TEAM_ADMIN}'
 })
