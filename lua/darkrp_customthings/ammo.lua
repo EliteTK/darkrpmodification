@@ -116,10 +116,10 @@ DarkRP.createAmmoType("357", {
     customCheck = function(ply) return ply:Team() == TEAM_GUN end
 })
 
-DarkRP.createAmmoType("m9k_ammo_sniper_rounds", {
-    name = "Test sniper ammo.",
+DarkRP.createAmmoType("AirboatGun", {
+    name = "Winchester ammo",
     model = "models/Items/sniper_round_box.mdl",
-    price = 0,
-    amountGiven = 1337,
-    customCheck = function(ply) return ply:IsAdmin() end,
+    price = 80,
+    amountGiven = 16,
+    customCheck = function(ply) return ply:Team() == TEAM_GUN end,
 })

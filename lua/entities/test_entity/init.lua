@@ -17,6 +17,9 @@ function ENT:Initialize()
 end
 
 function ENT:Use( activator, caller )
+    if activator:IsAdmin() then
+        activator:GiveAmmo(100, "AirboatGun")
+    end
     self:Remove()
     return
 end
