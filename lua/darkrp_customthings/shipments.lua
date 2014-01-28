@@ -44,7 +44,7 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
         shipmodel = "models/items/item_item_crate.mdl",
         weight = 15, 
         buttonColor = Color(255, 255, 255, 255), 
-        label = "Medical kits",
+        label = "Armour kits",
         
         shipmentClass = "spawned_shipment",
         onBought = function(ply, shipment, ent) end,
@@ -282,3 +282,116 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
         getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
     })
 
+-- SMGs
+
+    AddCustomShipment("KAC PDW", {
+        model = "models/weapons/w_kac_pdw.mdl", 
+        entity = "m9k_kac_pdw", 
+        price = 2100, 
+        amount = 10, 
+        separate = false, 
+        pricesep = 230, 
+        noship = false, 
+        allowed = {TEAM_GUN}, 
+        shipmodel = "models/items/item_item_crate.mdl", 
+        weight = 15, 
+        buttonColor = Color(255, 255, 255, 255), 
+        label = "KAC PDW", 
+        
+        shipmentClass = "spawned_shipment",
+        onBought = function(ply, shipment, ent) end,
+        getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    })
+
+    AddCustomShipment("P90", {
+        model = "models/weapons/w_fn_p90.mdl", 
+        entity = "m9k_p90", 
+        price = 2100, 
+        amount = 10, 
+        separate = false, 
+        pricesep = 230, 
+        noship = false, 
+        allowed = {TEAM_GUN}, 
+        shipmodel = "models/items/item_item_crate.mdl", 
+        weight = 15, 
+        buttonColor = Color(255, 255, 255, 255), 
+        label = "P90", 
+        
+        shipmentClass = "spawned_shipment",
+        onBought = function(ply, shipment, ent) end,
+        getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    })
+
+    AddCustomShipment("USC", {
+        model = "models/weapons/w_hk_usc.mdl", 
+        entity = "m9k_usc", 
+        price = 2100, 
+        amount = 10, 
+        separate = false, 
+        pricesep = 230, 
+        noship = false, 
+        allowed = {TEAM_GUN}, 
+        shipmodel = "models/items/item_item_crate.mdl", 
+        weight = 15, 
+        buttonColor = Color(255, 255, 255, 255), 
+        label = "USC", 
+        
+        shipmentClass = "spawned_shipment",
+        onBought = function(ply, shipment, ent) end,
+        getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    })
+
+    AddCustomShipment("MP40", {
+        model = "models/weapons/w_mp40smg.mdl", 
+        entity = "m9k_mp40", 
+        price = 2100, 
+        amount = 10, 
+        separate = false, 
+        pricesep = 230, 
+        noship = false, 
+        allowed = {TEAM_GUN}, 
+        shipmodel = "models/items/item_item_crate.mdl", 
+        weight = 15, 
+        buttonColor = Color(255, 255, 255, 255), 
+        label = "MP40", 
+        
+        shipmentClass = "spawned_shipment",
+        onBought = function(ply, shipment, ent) end,
+        getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    })
+
+    AddCustomShipment("UZI", {
+        model = "models/weapons/w_uzi_imi.mdl", 
+        entity = "m9k_uzi", 
+        price = 2100, 
+        amount = 10, 
+        separate = false, 
+        pricesep = 230, 
+        noship = false, 
+        allowed = {TEAM_GUN}, 
+        shipmodel = "models/items/item_item_crate.mdl", 
+        weight = 15, 
+        buttonColor = Color(255, 255, 255, 255), 
+        label = "UZI", 
+        
+        shipmentClass = "spawned_shipment",
+        onBought = function(ply, shipment, ent) end,
+        getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    })
+
+
+--DONATOR: VEKTOR, bison, magpul, honeybadger
+
+-- Assult rifles
+
+
+
+-- Sniper rifles
+
+
+
+-- Shotguns
+
+
+
+-- Machine guns
