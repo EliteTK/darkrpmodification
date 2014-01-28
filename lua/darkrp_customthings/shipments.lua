@@ -54,7 +54,7 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
 
     AddCustomShipment("Pistol ammo", {
         model = "models/Items/BoxSRounds.mdl", 
-        entity = "m9k_ammo_pistol", -- Check this in server files.
+        entity = "item_ammo_pistol", -- Check this in server files.
         price = 400,
         amount = 10,
         separate = false, 
