@@ -180,7 +180,12 @@ AddCustomShipment("winchester ammo", {
     getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
 })
 
--- PISTOLS
+--[[
+-- *******************
+-- STANDARD PISTOLS
+-- *******************
+--]]
+
 AddCustomShipment("USP", {
     model = "models/weapons/w_pist_fokkususp.mdl", 
     entity = "m9k_usp", 
@@ -200,28 +205,9 @@ AddCustomShipment("USP", {
     getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
 })
 
-AddCustomShipment("M92 Beretta", {
-    model = "models/weapons/w_beretta_m92.mdl", 
-    entity = "m9k_m92beretta", 
-    price = 1500, 
-    amount = 10, 
-    separate = true, 
-    pricesep = 175, 
-    noship = false, 
-    allowed = {TEAM_GUN}, 
-    shipmodel = "models/items/item_item_crate.mdl", 
-    weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
-    label = "M92 Beretta", 
-    
-    shipmentClass = "spawned_shipment",
-    onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
-})
-
-AddCustomShipment("HK45C", {
-    model = "models/weapons/w_hk45c.mdl", 
-    entity = "m9k_hk45", 
+AddCustomShipment("colt 1911", {
+    model = "models/weapons/s_dmgf_co1911.mdl", 
+    entity = "m9k_colt1911", 
     price = 1750, 
     amount = 10, 
     separate = true, 
@@ -231,7 +217,7 @@ AddCustomShipment("HK45C", {
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
     buttonColor = Color(255, 255, 255, 255), 
-    label = "HK45C", 
+    label = "Colt 1911", 
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -276,7 +262,93 @@ AddCustomShipment("Smith and wesson model 500", {
     getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
 })
 
--- SMGs
+AddCustomShipment("Raging bull", {
+    model = "models/weapons/w_taurus_raging_bull.mdl", 
+    entity = "m9k_ragingbull", 
+    price = 2100, 
+    amount = 10, 
+    separate = true, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "Raging bull", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("P229", {
+    model = "models/weapons/w_sig_229r.mdl", 
+    entity = "m9k_sig_p229r", 
+    price = 2100, 
+    amount = 10, 
+    separate = true, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "P229", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("HK45C", {
+    model = "models/weapons/w_hk45c.mdl", 
+    entity = "m9k_hk45", 
+    price = 2100, 
+    amount = 10, 
+    separate = true, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "HK45C", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+--[[
+-- *******************
+-- DONATOR PISTOLS
+-- *******************
+--]]
+
+AddCustomShipment("Raging bull scoped", {
+    model = "models/weapons/w_raging_bull_scoped.mdl", 
+    entity = "m9k_scoped_taurus", 
+    price = 2100, 
+    amount = 10, 
+    separate = true, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "Raging bull scoped", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+--[[
+-- *******************
+-- STANDARD SMGS
+-- *******************
+--]]
 
 AddCustomShipment("KAC PDW", {
     model = "models/weapons/w_kac_pdw.mdl", 
@@ -375,6 +447,88 @@ AddCustomShipment("UZI", {
 
 --[[
 -- *******************
+-- DONATOR SMGs
+-- *******************
+--]]
+
+AddCustomShipment("Magpul PDR", {
+    model = "models/weapons/w_magpul_pdr.mdl", 
+    entity = "m9k_magpulpdr", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "Magpul PDR", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Honeybadger", {
+    model = "models/weapons/w_aac_honeybadger.mdl", 
+    entity = "m9k_honeybadger", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "Honeybadger", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("KRISS vector", {
+    model = "models/weapons/w_kriss_vector.mdl", 
+    entity = "m9k_vector", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "KRISS vector", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Bizon PP19", {
+    model = "models/weapons/w_pp19_bizon.mdl", 
+    entity = "m9k_bizonp19", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "Bizon PP19", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+--[[
+-- *******************
 -- BLACK MARKET DEALER
 -- *******************
 --]]
@@ -444,8 +598,6 @@ AddCustomShipment("Silenced Keypad Cracker", {
 --
 -- Machine guns
 --
--- Sub-machine guns
--- "VEKTOR", "bison", "magpul", "honeybadger"
 --]]
 
 --[[
@@ -457,7 +609,5 @@ AddCustomShipment("Silenced Keypad Cracker", {
 -- Shotguns
 --
 -- Machine guns
---
--- Sub-machine guns
 --
 --]]
