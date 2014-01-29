@@ -31,7 +31,7 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
         entity = "item_battery",
         price = 1000,
         amount = 10,
-        separate = true, 
+        separate = false, 
         pricesep = 150, 
         noship = false, 
         allowed = {TEAM_BLACK_MARKET_DEALER, TEAM_SWAT_LEADER},

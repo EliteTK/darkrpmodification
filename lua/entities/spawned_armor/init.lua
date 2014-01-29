@@ -17,10 +17,10 @@ function ENT:Initialize()
 end
 
 function ENT:Use( activator, caller )
-    if ((activator:Health() + 10) <= 100) then
+    if (activator:Armor() <= 90) then
         self:EmitSound("items/battery_pickup.wav", 100, 100)
         self:Remove()
-        activator:SetArmor(activator:Armor() + 10)
+        activator:SetArmor(activator:Armor() + 15)
     end
 end
 
