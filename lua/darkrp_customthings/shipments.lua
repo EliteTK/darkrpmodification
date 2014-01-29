@@ -2,23 +2,17 @@
 --SHIPMENTS
 default: https://github.com/FPtje/DarkRP/blob/master/gamemode/config/addentities.lua
 examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
-
--- PLEASE NOTE - IF YOU WANT TO ADD AMMO SHIPMENTS AND HAVE THEM ONLY SHOW UP UNDER AMMO AS SINGLE BOXES
--- AND UNDER SHIPMENTS AS SHIPMENTS DISABLE SEPARATE AND RECREATE AMMO UNDER "ammo.lua".
-
 --]]
 
 
--- Additional note - we need to make sure we're spawning the right entity.
--- We also don't need to be using all these fields.
 -- MISC
 
     AddCustomShipment("Medical kits", {
         model = "models/Items/healthkit.mdl", 
-        entity = "item_healthkit", -- Check this in server files.
+        entity = "item_healthkit",
         price = 750,
         amount = 10,
-        separate = false, 
+        separate = true, 
         pricesep = 100, 
         noship = false, 
         allowed = {TEAM_MEDIC},
@@ -34,10 +28,10 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
 
     AddCustomShipment("Armour kits", {
         model = "models/Items/battery.mdl", 
-        entity = "item_battery", -- Check this in server files.
+        entity = "item_battery",
         price = 1000,
         amount = 10,
-        separate = false, 
+        separate = true, 
         pricesep = 150, 
         noship = false, 
         allowed = {TEAM_BLACK_MARKET_DEALER, TEAM_SWAT_LEADER},
@@ -72,7 +66,7 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
     })
 
     AddCustomShipment("SMG ammo", {
-        model = "models/Items/BoxsRounds.mdl", 
+        model = "models/Items/BoxMRounds.mdl", 
         entity = "item_ammo_smg1",
         price = 450,
         amount = 10,
@@ -92,7 +86,7 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
     })
 
     AddCustomShipment("Assult rifle ammo", {
-        model = "models/Items/BoxMRounds.mdl", 
+        model = "models/Items/BoxSRounds.mdl", 
         entity = "item_ammo_ar2", 
         price = 500,
         amount = 10,
@@ -112,7 +106,7 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
     
     AddCustomShipment("Shotgun ammo", {
         model = "models/Items/BoxBuckshot.mdl", 
-        entity = "item_ammo_buckshot", 
+        entity = "item_box_buckshot", 
         price = 500,
         amount = 10,
         separate = false, 
@@ -131,7 +125,7 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
     
     AddCustomShipment("Sniper ammo", {
         model = "models/Items/sniper_round_box.mdl", 
-        entity = "item_ammo_sniper_rounds", 
+        entity = "m9k_ammo_sniper_rounds", 
         price = 750,
         amount = 10,
         separate = false, 
@@ -169,7 +163,7 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
     
     AddCustomShipment("winchester ammo", {
         model = "models/Items/sniper_round_box.mdl", 
-        entity = "item_ammo_AirboatGun", 
+        entity = "m9k_ammo_winchester", 
         price = 550,
         amount = 10,
         separate = false, 

@@ -17,21 +17,23 @@ Add entities under the following line:
 ---------------------------------------------------------------------------*/
 --]]
 --
-DarkRP.createEntity("Rifle Ammo", {
-	ent = "m9k_ammo_ar2",
-	model = "models/Items/BoxMRounds.mdl",
-	price = 0,
-	max = 5,
-	cmd = "/buyrifleammo",
-})
 
 DarkRP.createEntity("Health vial", {
-    ent = "item_healthvial",
+    ent = "spawned_health_vial",
     model = "models/Items/BoxMRounds.mdl",
     price = 50,
-    max = 10,
+    max = 30,
     cmd = "/buyhealth",
-    allowed = {TEAM_GUN}
+    allowed = {TEAM_MEDIC}
+})
+
+DarkRP.createEntity("Armor", {
+    ent = "spawned_armor",
+    model = "models/Items/battery.mdl",
+    price = 150,
+    max = 30, 
+    cmd = "/buyarmor",
+    allowed = {TEAM_BLACK_MARKET_DEALER, TEAM_SWAT_LEADER}
 })
 
 DarkRP.createEntity("Test", {
