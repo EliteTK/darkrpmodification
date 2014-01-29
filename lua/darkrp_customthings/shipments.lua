@@ -371,7 +371,7 @@ AddCustomShipment("KAC PDW", {
 
 AddCustomShipment("P90", {
     model = "models/weapons/w_fn_p90.mdl", 
-    entity = "m9k_p90", 
+    entity = "m9k_smgp90", 
     price = 2100, 
     amount = 10, 
     separate = false, 
@@ -526,6 +526,210 @@ AddCustomShipment("Bizon PP19", {
     onBought = function(ply, shipment, ent) end,
     getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
 })
+
+--[[
+-- *******************
+-- STANDARD ASSULT RIFLES
+-- *******************
+--]]
+
+AddCustomShipment("M14", {
+    model = "models/weapons/w_snip_m14sp.mdl", 
+    entity = "m9k_m14sp", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "M14", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("M4A1", {
+    model = "models/weapons/w_m4a1_iron.mdl", 
+    entity = "m9k_m4a1", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "M4A1", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("HK416", {
+    model = "models/weapons/w_hk_416.mdl", 
+    entity = "m9k_m416", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "HK416", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Famas", {
+    model = "models/weapons/w_tct_famas.mdl", 
+    entity = "m9k_famas", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "Famas", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("G36", {
+    model = "models/weapons/w_hk_g36c.mdl", 
+    entity = "m9k_g36", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "G36", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Winchester", {
+    model = "models/weapons/w_winchester_1873.mdl", 
+    entity = "m9k_winchester73", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "Winchester", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+
+--[[
+-- *******************
+-- DONATOR ASSULT RIFLES
+-- *******************
+--]]
+
+AddCustomShipment("TAR21", {
+    model = "models/weapons/w_imi_tar21.mdl", 
+    entity = "m9k_tar21", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "TAR21", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("L85", {
+    model = "models/weapons/w_l85a2.mdl", 
+    entity = "m9k_l85", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "L85", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("M16A4", {
+    model = "models/weapons/w_dmg_m16ag.mdl", 
+    entity = "m9k_m16a4_acog", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "M16A4", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("SCAR H", {
+    model = "models/weapons/w_fn_scar_h..mdl", 
+    entity = "m9k_scar", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "SCAR H", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+})
+
 
 --[[
 -- *******************
