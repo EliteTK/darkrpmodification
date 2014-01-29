@@ -23,7 +23,7 @@ DarkRP.createEntity("Health vial", {
     model = "models/Items/BoxMRounds.mdl",
     price = 50,
     max = 30,
-    cmd = "/buyhealth",
+    cmd = "buyhealth",
     allowed = {TEAM_MEDIC}
 })
 
@@ -32,7 +32,7 @@ DarkRP.createEntity("Armor", {
     model = "models/Items/battery.mdl",
     price = 150,
     max = 30, 
-    cmd = "/buyarmor",
+    cmd = "buyarmor",
     allowed = {TEAM_BLACK_MARKET_DEALER, TEAM_SWAT_LEADER}
 })
 
@@ -41,6 +41,6 @@ DarkRP.createEntity("Test", {
     model = "models/props_interiors/BathTub01a.mdl",
     price = 0,
     max = 1,
-    cmd = "/buybath",
+    cmd = "buybath",
     allowed = {TEAM_ADMIN}
 })
