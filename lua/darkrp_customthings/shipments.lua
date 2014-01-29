@@ -712,7 +712,7 @@ AddCustomShipment("M16A4", {
 })
 
 AddCustomShipment("SCAR H", {
-    model = "models/weapons/w_fn_scar_h..mdl", 
+    model = "models/weapons/w_fn_scar_h.mdl", 
     entity = "m9k_scar", 
     price = 2100, 
     amount = 10, 
