@@ -362,7 +362,7 @@ AddCustomShipment("KAC PDW", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 80, 255, 255), 
     label = "KAC PDW",
     
     shipmentClass = "spawned_shipment",
@@ -381,7 +381,7 @@ AddCustomShipment("P90", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 80, 255, 255), 
     label = "P90", 
     
     shipmentClass = "spawned_shipment",
