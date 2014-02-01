@@ -18,7 +18,7 @@ AddCustomShipment("Medical kits", {
     allowed = {TEAM_MEDIC},
     shipmodel = "models/items/item_item_crate.mdl",
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(255, 80, 80, 255), 
     label = "Medical kits",
     
     shipmentClass = "spawned_shipment",
@@ -37,7 +37,7 @@ AddCustomShipment("Armour kits", {
     allowed = {TEAM_BLACK_MARKET_DEALER, TEAM_SWAT_LEADER},
     shipmodel = "models/items/item_item_crate.mdl",
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 80, 255, 255), 
     label = "Armour kits",
     
     shipmentClass = "spawned_shipment",
@@ -57,7 +57,7 @@ AddCustomShipment("Pistol ammo", {
     allowed = {TEAM_GUN},
     shipmodel = "models/items/item_item_crate.mdl",
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 255, 80, 255), 
     label = "Pistol Ammo",
     
     shipmentClass = "spawned_shipment",
@@ -77,7 +77,7 @@ AddCustomShipment("SMG ammo", {
     shipmodel = "models/items/item_item_crate.mdl", 
 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 80, 255, 255), 
     label = "SMG Ammo", 
 
     shipmentClass = "spawned_shipment",
@@ -86,7 +86,7 @@ AddCustomShipment("SMG ammo", {
 })
 
 AddCustomShipment("Assult rifle ammo", {
-    model = "models/Items/BoxSRounds.mdl", 
+    model = "models/Items/combine_rifle_cartridge01.mdl", 
     entity = "item_ammo_ar2", 
     price = 500,
     amount = 10,
@@ -96,7 +96,7 @@ AddCustomShipment("Assult rifle ammo", {
     allowed = {TEAM_GUN},
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "Assult rifle Ammo", 
 
     shipmentClass = "spawned_shipment",
@@ -115,7 +115,7 @@ AddCustomShipment("Shotgun ammo", {
     allowed = {TEAM_GUN},
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(200, 25, 25, 255), 
     label = "Shotgun Ammo", 
 
     shipmentClass = "spawned_shipment",
@@ -134,7 +134,7 @@ AddCustomShipment("Sniper ammo", {
     allowed = {TEAM_GUN},
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(200, 200, 25, 255), 
     label = "Sniper Ammo", 
 
     shipmentClass = "spawned_shipment",
@@ -153,7 +153,7 @@ AddCustomShipment(".357 ammo", {
     allowed = {TEAM_GUN},
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(255, 128, 0, 255), 
     label = ".357 Ammo", 
 
     shipmentClass = "spawned_shipment",
@@ -172,7 +172,7 @@ AddCustomShipment("winchester ammo", {
     allowed = {TEAM_GUN},
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(140, 70, 0, 255), 
     label = "Winchester Ammo", 
 
     shipmentClass = "spawned_shipment",
@@ -197,7 +197,7 @@ AddCustomShipment("USP", {
     allowed = {TEAM_GUN},
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 255, 80, 255), 
     label = "USP", 
 
     shipmentClass = "spawned_shipment",
@@ -216,7 +216,7 @@ AddCustomShipment("colt 1911", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 255, 80, 255), 
     label = "Colt 1911", 
     
     shipmentClass = "spawned_shipment",
@@ -235,7 +235,7 @@ AddCustomShipment("Glock 18", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 255, 80, 255), 
     label = "Glock 18", 
     
     shipmentClass = "spawned_shipment",
@@ -254,7 +254,7 @@ AddCustomShipment("Smith and wesson model 500", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(255, 128, 0, 255), 
     label = "Model 500", 
     
     shipmentClass = "spawned_shipment",
@@ -273,7 +273,7 @@ AddCustomShipment("Raging bull", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(255, 128, 0, 255), 
     label = "Raging bull", 
     
     shipmentClass = "spawned_shipment",
@@ -292,7 +292,7 @@ AddCustomShipment("P229", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 255, 80, 255), 
     label = "P229", 
     
     shipmentClass = "spawned_shipment",
@@ -311,7 +311,7 @@ AddCustomShipment("HK45C", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 255, 80, 255), 
     label = "HK45C", 
     
     shipmentClass = "spawned_shipment",
@@ -336,7 +336,7 @@ AddCustomShipment("Raging bull scoped", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(255, 128, 0, 255), 
     label = "Raging bull scoped", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -400,7 +400,7 @@ AddCustomShipment("USC", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 80, 255, 255), 
     label = "USC", 
     
     shipmentClass = "spawned_shipment",
@@ -419,7 +419,7 @@ AddCustomShipment("MP40", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 80, 255, 255), 
     label = "MP40", 
     
     shipmentClass = "spawned_shipment",
@@ -438,7 +438,7 @@ AddCustomShipment("UZI", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 80, 255, 255), 
     label = "UZI", 
     
     shipmentClass = "spawned_shipment",
@@ -463,7 +463,7 @@ AddCustomShipment("Magpul PDR", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 80, 255, 255), 
     label = "Magpul PDR", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -483,7 +483,7 @@ AddCustomShipment("Honeybadger", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "Honeybadger", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -503,7 +503,7 @@ AddCustomShipment("KRISS vector", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 80, 255, 255), 
     label = "KRISS vector", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -523,7 +523,7 @@ AddCustomShipment("Bizon PP19", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(80, 80, 255, 255), 
     label = "Bizon PP19", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -549,7 +549,7 @@ AddCustomShipment("M14", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "M14", 
     
     shipmentClass = "spawned_shipment",
@@ -568,7 +568,7 @@ AddCustomShipment("M4A1", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "M4A1", 
     
     shipmentClass = "spawned_shipment",
@@ -587,7 +587,7 @@ AddCustomShipment("HK416", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "HK416", 
     
     shipmentClass = "spawned_shipment",
@@ -606,7 +606,7 @@ AddCustomShipment("Famas", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "Famas", 
     
     shipmentClass = "spawned_shipment",
@@ -625,7 +625,7 @@ AddCustomShipment("G36", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "G36", 
     
     shipmentClass = "spawned_shipment",
@@ -644,7 +644,7 @@ AddCustomShipment("Winchester", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(140, 70, 0, 255), 
     label = "Winchester", 
     
     shipmentClass = "spawned_shipment",
@@ -670,7 +670,7 @@ AddCustomShipment("TAR21", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "TAR21", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -690,7 +690,7 @@ AddCustomShipment("L85", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "L85", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -710,7 +710,7 @@ AddCustomShipment("M16A4", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "M16A4", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -730,7 +730,7 @@ AddCustomShipment("SCAR H", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "SCAR H",
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -756,7 +756,7 @@ AddCustomShipment("Winchester 87", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(200, 25, 25, 255), 
     label = "Winchester 87", 
     
     shipmentClass = "spawned_shipment",
@@ -775,7 +775,7 @@ AddCustomShipment("Remington 870", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(200, 25, 25, 255), 
     label = "Remington 870", 
     
     shipmentClass = "spawned_shipment",
@@ -800,7 +800,7 @@ AddCustomShipment("SPAS 12", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(200, 25, 25, 255), 
     label = "SPAS 12", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -826,7 +826,7 @@ AddCustomShipment("M24", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(200, 200, 25, 255), 
     label = "M24", 
     
     shipmentClass = "spawned_shipment",
@@ -845,7 +845,7 @@ AddCustomShipment("M98B", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(200, 200, 25, 255), 
     label = "M98B", 
     
     shipmentClass = "spawned_shipment",
@@ -870,7 +870,7 @@ AddCustomShipment("SVT 40", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(200, 200, 25, 255), 
     label = "SVT 40",
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -897,7 +897,7 @@ AddCustomShipment("FG 42", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "FG 42", 
     
     shipmentClass = "spawned_shipment",
@@ -916,7 +916,7 @@ AddCustomShipment("PKM", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "PKM", 
     
     shipmentClass = "spawned_shipment",
@@ -942,7 +942,7 @@ AddCustomShipment("M249", {
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15, 
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(114, 0, 191, 255), 
     label = "M249", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     
@@ -970,7 +970,7 @@ AddCustomShipment("Fast Lockpick", {
     allowed = {TEAM_BLACK_MARKET_DEALER}, 
     shipmodel = "models/items/item_item_crate.mdl", 
     weight = 15,
-    buttonColor = Color(255, 255, 255, 255), 
+    buttonColor = Color(88, 88, 88, 255), 
     label = "Fast lockpick", 
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
 
@@ -990,7 +990,7 @@ AddCustomShipment("Keypad Cracker", {
     allowed = {TEAM_BLACK_MARKET_DEALER},
     shipmodel = "models/items/item_item_crate.mdl",
     weight = 15,
-    buttonColor = Color(128, 128, 255, 255),
+    buttonColor = Color(88, 88, 88, 255),
     label = "Keypad Cracker",
     
     shipmentClass = "spawned_shipment",
@@ -1009,7 +1009,7 @@ AddCustomShipment("Silenced Keypad Cracker", {
     allowed = {TEAM_BLACK_MARKET_DEALER},
     shipmodel = "models/items/item_item_crate.mdl",
     weight = 15,
-    buttonColor = Color(128, 255, 128, 255),
+    buttonColor = Color(88, 88, 88, 255),
     label = "Silenced Keypad Cracker",
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
     

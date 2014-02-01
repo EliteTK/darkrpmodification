@@ -20,7 +20,7 @@ Add entities under the following line:
 
 DarkRP.createEntity("Health vial", {
     ent = "spawned_health_vial",
-    model = "models/Items/BoxMRounds.mdl",
+    model = "models/healthvial.mdl",
     price = 50,
     max = 30,
     cmd = "buyhealth",
