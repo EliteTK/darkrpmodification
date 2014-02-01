@@ -730,6 +730,215 @@ AddCustomShipment("SCAR H", {
     getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
+--[[
+-- *******************
+-- STANDARD SHOTGUNS
+-- *******************
+--]]
+
+AddCustomShipment("Winchester 87", {
+    model = "models/weapons/w_winchester_1887.mdl", 
+    entity = "m9k_1887winchester", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "Winchester 87", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Remington 870", {
+    model = "models/weapons/w_remington_870_tact.mdl", 
+    entity = "m9k_remington870", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "Remington 870", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+--[[
+-- *******************
+-- DONATOR SHOTGUNS
+-- *******************
+--]]
+
+AddCustomShipment("SPAS 12", {
+    model = "models/weapons/w_remington_870_tact.mdl", 
+    entity = "w_spas_12", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "SPAS 12", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+--[[
+-- *******************
+-- STANDARD SNIPER RIFLES
+-- *******************
+--]]
+
+AddCustomShipment("M24", {
+    model = "models/weapons/w_snip_m24_6.mdl", 
+    entity = "m9k_m24", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "M24", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("M98B", {
+    model = "models/weapons/w_barrett_m98b.mdl", 
+    entity = "m9k_m98b", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "M98B", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+--[[
+-- *******************
+-- DONATOR SNIPER RIFLES
+-- *******************
+--]]
+
+AddCustomShipment("SVT 40", {
+    model = "models/weapons/w_svt_40.mdl", 
+    entity = "m9k_svt40", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "SVT 40", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+
+--[[
+-- *******************
+-- STANDARD MACHINE GUNS
+-- *******************
+--]]
+
+AddCustomShipment("FG 42", {
+    model = "models/weapons/w_fg42.mdl", 
+    entity = "m9k_fg42", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "FG 42", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("PKM", {
+    model = "models/weapons/w_mach_russ_pkm.mdl", 
+    entity = "m9k_pkm", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "PKM", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+
+--[[
+-- *******************
+-- DONATOR MACHINE GUNS
+-- *******************
+--]]
+
+AddCustomShipment("M249", {
+    model = "models/weapons/w_m249_machine_gun.mdl", 
+    entity = "m9k_m249lmg", 
+    price = 2100, 
+    amount = 10, 
+    separate = false, 
+    pricesep = 230, 
+    noship = false, 
+    allowed = {TEAM_GUN}, 
+    shipmodel = "models/items/item_item_crate.mdl", 
+    weight = 15, 
+    buttonColor = Color(255, 255, 255, 255), 
+    label = "M249", 
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
 
 --[[
 -- *******************
@@ -794,7 +1003,6 @@ AddCustomShipment("Silenced Keypad Cracker", {
 
 --[[
 -- DONATOR: 
--- Assult rifles
 --
 -- Sniper rifles
 --
@@ -806,7 +1014,6 @@ AddCustomShipment("Silenced Keypad Cracker", {
 
 --[[
 -- SANDARD: 
--- Assult rifles
 --
 -- Sniper rifles
 --
