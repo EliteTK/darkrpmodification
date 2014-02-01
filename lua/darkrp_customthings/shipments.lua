@@ -9,7 +9,7 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
 
 AddCustomShipment("Medical kits", {
     model = "models/Items/healthkit.mdl", 
-    entity = "item_healthkit",
+    entity = "spawned_health_kit",
     price = 750,
     amount = 10,
     separate = false, 
@@ -26,9 +26,28 @@ AddCustomShipment("Medical kits", {
     getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
+AddCustomShipment("Medical vials", {
+    model = "models/healthvial.mdl",
+    entity = "spawned_health_vial",
+    price = 0,
+    amount = 0,
+    separate = false, 
+    pricesep = 0, 
+    noship = true, 
+    allowed = {},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15, 
+    buttonColor = Color(255, 80, 80, 255), 
+    label = "Medical vials",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
 AddCustomShipment("Armour kits", {
     model = "models/Items/battery.mdl", 
-    entity = "item_battery",
+    entity = "spawned_armor",
     price = 1000,
     amount = 10,
     separate = false, 

@@ -23,8 +23,18 @@ DarkRP.createEntity("Health vial", {
     model = "models/healthvial.mdl",
     price = 50,
     max = 30,
-    cmd = "buyhealth",
+    cmd = "buyvial",
     buttonColor = Color(255, 80, 80, 255), 
+    allowed = {TEAM_MEDIC}
+})
+
+DarkRP.createEntity("Health kit", {
+    ent = "spawned_health_kit",
+    model = "models/items/healthkit.mdl",
+    price = 100,
+    max = 30,
+    cmd = "buykit",
+    buttonColor = Color(255, 80, 80, 255),
     allowed = {TEAM_MEDIC}
 })
 
@@ -45,5 +55,15 @@ DarkRP.createEntity("Test", {
     max = 1,
     cmd = "buybath",
     buttonColor = Color(12, 80, 255, 255), 
+    allowed = {TEAM_ADMIN}
+})
+
+DarkRP.createEntity("Another test", {
+    ent = "test_playerpos_entity",
+    model = "models/props_lab/citizenradio.mdl",
+    price = 0,
+    max = 100,
+    cmd = "buybath",
+    buttonColor = Color(123, 32, 45, 255),
     allowed = {TEAM_ADMIN}
 })

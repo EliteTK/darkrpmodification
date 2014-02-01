@@ -5,7 +5,7 @@ include('shared.lua')
 include('ent_utilities/spawnedenttools.lua')
 
 function ENT:Initialize()
-    self:SetModel( "models/Items/battery.mdl" )
+    self:SetModel( "models/items/healthkit.mdl" )
     self:PhysicsInit( SOLID_VPHYSICS )
     self:SetMoveType( MOVETYPE_VPHYSICS )
     self:SetSolid( SOLID_VPHYSICS )
@@ -17,15 +17,15 @@ function ENT:Initialize()
 end
 
 function ENT:Use( activator, caller )
-    if (activator:Armor() < 100) then
-        self:EmitSound("items/battery_pickup.wav", 100, 100)
+    if (activator:Health() < 100) then
+        self:EmitSound("items/smallmedkit1.wav", 100, 100)
         self:Remove()
-        activator:SetArmor(activator:Armor() + 15)
-        if activator:Armor() > 100 then
-            activator:SetArmor( 100 )
+        activator:SetHealth(activator:Health() + 25)
+        if activator:Health() > 100 then
+            activator:SetHealth(100)
         end
     else
-        converttospawned_weapon(self, "spawned_armor")
+        converttospawned_weapon(self, "spawned_health_kit")
     end
 end
 

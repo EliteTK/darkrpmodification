@@ -18,6 +18,7 @@ end
 
 function ENT:Use( activator, caller )
     local pos = self:GetPos()
+    local angles = self:GetAngles()
     self:Remove()
     if ( activator:IsAdmin() ) then
         if ( activator:Health() < 100 ) then
@@ -29,10 +30,11 @@ function ENT:Use( activator, caller )
             weaponboat = ents.Create("spawned_weapon")
             weaponboat:SetModel("models/props_interiors/BathTub01a.mdl")
             weaponboat:SetPos(pos)
+            weaponboat:SetAngles(angles)
             weaponboat.weaponclass = "test_entity"
-            weaponboat.ammoadd = 1
-            weaponboat.clip1 = 1
-            weaponboat.clip2 = 1
+--            weaponboat.ammoadd = 1
+--            weaponboat.clip1 = 1
+--            weaponboat.clip2 = 1
             weaponboat.ShareGravgun = true
             weaponboat.nodupe = true
             weaponboat:Spawn()
