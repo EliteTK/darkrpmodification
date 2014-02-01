@@ -125,7 +125,7 @@ AddCustomShipment("Shotgun ammo", {
 
 AddCustomShipment("Sniper ammo", {
     model = "models/Items/sniper_round_box.mdl", 
-    entity = "m9k_ammo_sniper_rounds", 
+    entity = "item_ammo_sniper", 
     price = 750,
     amount = 10,
     separate = false, 
@@ -163,7 +163,7 @@ AddCustomShipment(".357 ammo", {
 
 AddCustomShipment("winchester ammo", {
     model = "models/Items/sniper_round_box.mdl", 
-    entity = "m9k_ammo_winchester", 
+    entity = "item_ammo_winchester", 
     price = 550,
     amount = 10,
     separate = false, 
