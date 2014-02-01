@@ -19,3 +19,4 @@ DarkRP.createDemoteGroup("Name of the group", {TEAM1, TEAM2})
 
 DarkRP.createDemoteGroup("CP", {TEAM_CP, TEAM_CP_CHIEF})
 DarkRP.createDemoteGroup("SWAT", {TEAM_SWAT, TEAM_SWAT_LEADER})
+DarkRP.createDemoteGroup("MOB", {TEAM_GANG, TEAM_MOB})

@@ -322,26 +322,26 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
      })
      
      TEAM_BANKER = DarkRP.createJob("Banker", {
-        color = Color(62, 132, 166, 255),
+        color = Color(0, 255, 0, 255),
         model = "models/player/magnusson.mdl",
         description = [[Your a banker, you can have printers legally however you should get a guard or you may be raided]],
         weapons = {},
         command = "banker",
         max = 1,
-        salary = 55,
+        salary = 50,
         admin = 0,
         vote = false,
         hasLicense = false,
      })
      
      TEAM_GUARD = DarkRP.createJob("Guard", {
-        color = Color(62, 132, 166, 255),
+        color = Color(150, 150, 150, 255),
         model = "models/player/barney.mdl",
         description = [[You are a guard. You are hired by people and must protect them with your life]],
         weapons = {"stunstick"},
         command = "guard",
         max = 5,
-        salary = 55,
+        salary = 40,
         admin = 0,
         vote = false,
         hasLicense = false,
