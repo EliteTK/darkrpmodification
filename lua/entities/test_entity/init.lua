@@ -29,7 +29,12 @@ function ENT:Use( activator, caller )
             weaponboat = ents.Create("spawned_weapon")
             weaponboat:SetModel("models/props_interiors/BathTub01a.mdl")
             weaponboat:SetPos(pos)
-            weaponboat:weaponclass = "test_entity"
+            weaponboat.weaponclass = "test_entity"
+            weaponboat.ammoadd = 1
+            weaponboat.clip1 = 1
+            weaponboat.clip2 = 1
+            weaponboat.ShareGravgun = true
+            weaponboat.nodupe = true
             weaponboat:Spawn()
         end
     end
