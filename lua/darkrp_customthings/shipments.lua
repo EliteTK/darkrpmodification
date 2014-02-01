@@ -23,7 +23,7 @@ AddCustomShipment("Medical kits", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Armour kits", {
@@ -42,7 +42,7 @@ AddCustomShipment("Armour kits", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 
@@ -62,7 +62,7 @@ AddCustomShipment("Pistol ammo", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("SMG ammo", {
@@ -82,7 +82,7 @@ AddCustomShipment("SMG ammo", {
 
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Assult rifle ammo", {
@@ -101,7 +101,7 @@ AddCustomShipment("Assult rifle ammo", {
 
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Shotgun ammo", {
@@ -120,7 +120,7 @@ AddCustomShipment("Shotgun ammo", {
 
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Sniper ammo", {
@@ -139,7 +139,7 @@ AddCustomShipment("Sniper ammo", {
 
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment(".357 ammo", {
@@ -158,7 +158,7 @@ AddCustomShipment(".357 ammo", {
 
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("winchester ammo", {
@@ -177,7 +177,7 @@ AddCustomShipment("winchester ammo", {
 
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 --[[
@@ -202,7 +202,7 @@ AddCustomShipment("USP", {
 
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("colt 1911", {
@@ -221,7 +221,7 @@ AddCustomShipment("colt 1911", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Glock 18", {
@@ -240,7 +240,7 @@ AddCustomShipment("Glock 18", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Smith and wesson model 500", {
@@ -259,7 +259,7 @@ AddCustomShipment("Smith and wesson model 500", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Raging bull", {
@@ -278,7 +278,7 @@ AddCustomShipment("Raging bull", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("P229", {
@@ -297,7 +297,7 @@ AddCustomShipment("P229", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("HK45C", {
@@ -316,7 +316,7 @@ AddCustomShipment("HK45C", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 --[[
@@ -341,7 +341,7 @@ AddCustomShipment("Raging bull scoped", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 --[[
@@ -366,7 +366,7 @@ AddCustomShipment("KAC PDW", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("P90", {
@@ -385,7 +385,7 @@ AddCustomShipment("P90", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("USC", {
@@ -404,7 +404,7 @@ AddCustomShipment("USC", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("MP40", {
@@ -423,7 +423,7 @@ AddCustomShipment("MP40", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("UZI", {
@@ -442,7 +442,7 @@ AddCustomShipment("UZI", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 --[[
@@ -467,7 +467,7 @@ AddCustomShipment("Magpul PDR", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Honeybadger", {
@@ -486,7 +486,7 @@ AddCustomShipment("Honeybadger", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("KRISS vector", {
@@ -505,7 +505,7 @@ AddCustomShipment("KRISS vector", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Bizon PP19", {
@@ -524,7 +524,7 @@ AddCustomShipment("Bizon PP19", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 --[[
@@ -549,7 +549,7 @@ AddCustomShipment("M14", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("M4A1", {
@@ -568,7 +568,7 @@ AddCustomShipment("M4A1", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("HK416", {
@@ -587,7 +587,7 @@ AddCustomShipment("HK416", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Famas", {
@@ -606,7 +606,7 @@ AddCustomShipment("Famas", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("G36", {
@@ -625,7 +625,7 @@ AddCustomShipment("G36", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Winchester", {
@@ -644,7 +644,7 @@ AddCustomShipment("Winchester", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 
@@ -670,7 +670,7 @@ AddCustomShipment("TAR21", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("L85", {
@@ -689,7 +689,7 @@ AddCustomShipment("L85", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("M16A4", {
@@ -708,7 +708,7 @@ AddCustomShipment("M16A4", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("SCAR H", {
@@ -727,7 +727,7 @@ AddCustomShipment("SCAR H", {
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 
@@ -753,7 +753,7 @@ AddCustomShipment("Fast Lockpick", {
     label = "Fast lockpick", 
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return pply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Keypad Cracker", {
@@ -771,7 +771,7 @@ AddCustomShipment("Keypad Cracker", {
     label = "Keypad Cracker",
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 AddCustomShipment("Silenced Keypad Cracker", {
@@ -789,7 +789,7 @@ AddCustomShipment("Silenced Keypad Cracker", {
     label = "Silenced Keypad Cracker",
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetNWString("usergroup") == "donator" and price * 0.9 or price end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
 --[[
