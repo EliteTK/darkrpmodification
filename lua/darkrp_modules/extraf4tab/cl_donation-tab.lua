@@ -7,4 +7,5 @@ local function createF4MenuTab()
 	webPage:OpenURL(url)
 	DarkRP.addF4MenuTab(tabName, webPage)
 end
-hook.Add("F4MenuTabs", "MyCustomF4MenuTab", createF4MenuTab)
+
+hook.Add("F4MenuTabs", "donationsTab", createF4MenuTab)

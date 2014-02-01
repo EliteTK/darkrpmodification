@@ -7,4 +7,4 @@ local webPage = vgui.Create("F1HTML")
 webPage:OpenURL(url)
 DarkRP.addF4MenuTab(tabName, webPage)
 end
-hook.Add("F4MenuTabs", "MyCustomF4MenuTab", createF4MenuTab)
+hook.Add("F4MenuTabs", "rulesTab", createF4MenuTab)
