@@ -181,7 +181,7 @@ AddCustomShipment("winchester ammo", {
 })
 
 AddCustomShipment("Knife", {
-    model = "models/Items/w_extreme_ratio.mdl", 
+    model = "models/weapons/w_extreme_ratio.mdl", 
     entity = "m9k_knife",
     price = 1000,
     amount = 10,
