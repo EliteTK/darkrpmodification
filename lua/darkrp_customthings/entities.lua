@@ -24,6 +24,7 @@ DarkRP.createEntity("Health vial", {
     price = 50,
     max = 30,
     cmd = "buyhealth",
+    buttonColor = Color(255, 80, 80, 255), 
     allowed = {TEAM_MEDIC}
 })
 
@@ -33,6 +34,7 @@ DarkRP.createEntity("Armor", {
     price = 150,
     max = 30, 
     cmd = "buyarmor",
+    buttonColor = Color(80, 80, 255, 255), 
     allowed = {TEAM_BLACK_MARKET_DEALER, TEAM_SWAT_LEADER}
 })
 
@@ -42,5 +44,6 @@ DarkRP.createEntity("Test", {
     price = 0,
     max = 1,
     cmd = "buybath",
+    buttonColor = Color(12, 80, 255, 255), 
     allowed = {TEAM_ADMIN}
 })
