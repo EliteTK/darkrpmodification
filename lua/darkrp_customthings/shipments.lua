@@ -12,7 +12,7 @@ AddCustomShipment("Medical kits", {
     entity = "item_healthkit",
     price = 750,
     amount = 10,
-    separate = true, 
+    separate = false, 
     pricesep = 100, 
     noship = false, 
     allowed = {TEAM_MEDIC},
