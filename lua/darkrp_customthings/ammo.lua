@@ -80,7 +80,7 @@ DarkRP.createAmmoType("ar2", {
     name = "Assult rifle ammo",
     model = "models/Items/combine_rifle_cartridge01.mdl",
     price = 50,
-    amountGiven = 30,
+    amountGiven = 20,
     customCheck = function(ply) return ply:Team() == TEAM_GUN end
 })
 
@@ -88,7 +88,7 @@ DarkRP.createAmmoType("pistol", {
     name = "Pistol ammo",
     model = "models/Items/BoxSRounds.mdl",
     price = 30,
-    amountGiven = 24,
+    amountGiven = 20,
     customCheck = function(ply) return ply:Team() == TEAM_GUN end
 })
 
@@ -96,7 +96,7 @@ DarkRP.createAmmoType("smg1", {
     name = "SMG ammo",
     model = "models/Items/BoxMRounds.mdl",
     price = 50,
-    amountGiven = 30,
+    amountGiven = 45,
     customCheck = function(ply) return ply:Team() == TEAM_GUN end
 })
 
@@ -104,15 +104,15 @@ DarkRP.createAmmoType("buckshot", {
     name = "Shotgun ammo",
     model = "models/Items/BoxBuckshot.mdl",
     price = 50,
-    amountGiven = 16,
+    amountGiven = 20,
     customCheck = function(ply) return ply:Team() == TEAM_GUN end
 })
 
 DarkRP.createAmmoType("357", {
     name = "357 ammo",
     model = "models/Items/357ammobox.mdl",
-    price = 40,
-    amountGiven = 12,
+    price = 50,
+    amountGiven = 6,
     customCheck = function(ply) return ply:Team() == TEAM_GUN end
 })
 
