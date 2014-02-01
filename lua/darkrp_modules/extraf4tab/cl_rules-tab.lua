@@ -1,5 +1,5 @@
 local url = ""
-local tabName = "Donations"
+local tabName = "Rules"
 
 
 local function createF4MenuTab()
