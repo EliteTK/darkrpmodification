@@ -180,6 +180,25 @@ AddCustomShipment("winchester ammo", {
     getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
+AddCustomShipment("Knife", {
+    model = "models/Items/w_extreme_ratio.mdl", 
+    entity = "m9k_knife",
+    price = 1000,
+    amount = 10,
+    separate = true, 
+    pricesep = 150, 
+    noship = false, 
+    allowed = {TEAM_GUN},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15, 
+    buttonColor = Color(88, 88, 88, 255), 
+    label = "Knife",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
 --[[
 -- *******************
 -- STANDARD PISTOLS
