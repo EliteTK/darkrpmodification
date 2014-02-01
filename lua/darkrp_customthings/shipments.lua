@@ -86,7 +86,7 @@ AddCustomShipment("SMG ammo", {
 })
 
 AddCustomShipment("Assult rifle ammo", {
-    model = "models/Items/BoxSRounds.mdl", 
+    model = "models/Items/combine_rifle_cartridge01.mdl", 
     entity = "item_ammo_ar2", 
     price = 500,
     amount = 10,
