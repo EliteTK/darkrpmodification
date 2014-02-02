@@ -346,6 +346,34 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
         vote = false,
         hasLicense = false,
      })
+     
+     TEAM_GUARD = DarkRP.createJob("Mechanic", {
+        color = Color(51, 102, 153, 255),
+        model = "models/player/Group01/Male_05.mdl",
+        description = [[As a mechanic you should repair peoples' cars for a price.]],
+        weapons = {"weapon_scarrepair", "weapon_scarrefuel"},
+        command = "mechanic",
+        max = 2,
+        salary = 50,
+        admin = 0,
+        vote = false,
+        hasLicense = false,
+     })
+     
+     TEAM_GUARD = DarkRP.createJob("Taxi driver", {
+        color = Color(230, 230, 0, 255),
+        model = "models/player/eli.mdl",
+        description = [[Drive people around at a cost.]],
+        weapons = {"weapon_scarrepair", "weapon_scarrefuel"},
+        command = "taxi",
+        max = 2,
+        salary = 50,
+        admin = 0,
+        vote = false,
+        hasLicense = false,
+     })
+     
+
 
 /*---------------------------------------------------------------------------
 Define which team joining players spawn into and what team you change to if demoted
