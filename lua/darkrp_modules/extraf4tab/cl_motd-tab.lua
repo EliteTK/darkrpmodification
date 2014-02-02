@@ -1,5 +1,5 @@
 -- new file
-local url = ""
+local url = "http://www.sanger.dk/"
 local tabName = "MOTD"
 
 
