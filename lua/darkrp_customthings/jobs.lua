@@ -362,7 +362,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
         hasLicense = false,
      })
      
-     TEAM_GUARD = DarkRP.createJob("Mechanic", {
+     TEAM_MECHANIC = DarkRP.createJob("Mechanic", {
         color = Color(51, 102, 153, 255),
         model = "models/player/Group01/Male_05.mdl",
         description = [[As a mechanic you should repair peoples' cars for a price.]],
@@ -375,7 +375,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
         hasLicense = false,
      })
      
-     TEAM_GUARD = DarkRP.createJob("Taxi driver", {
+     TEAM_TAXI = DarkRP.createJob("Taxi driver", {
         color = Color(230, 230, 0, 255),
         model = "models/player/eli.mdl",
         description = [[Drive people around at a cost.]],
