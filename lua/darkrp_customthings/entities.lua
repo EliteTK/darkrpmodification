@@ -67,3 +67,12 @@ DarkRP.createEntity("Another test", {
     buttonColor = Color(123, 32, 45, 255),
     allowed = {TEAM_ADMIN}
 })
+
+DarkRP.createEntity("Novice Printer", {
+ent = "novice_printer",
+model = "models/props_c17/consolebox01a.mdl",
+price = 1000,
+max = 2,
+cmd = "buymoneyprinter"
+    buttonColor = Color(88, 88, 88, 255),
+})
