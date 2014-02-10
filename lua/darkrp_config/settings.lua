@@ -202,9 +202,9 @@ GM.Config.minlotterycost				= 30
 -- Money packets will get removed if they don't get picked up after a while. Set to 0 to disable
 GM.Config.moneyRemoveTime				= 600
 -- mprintamount - Value of the money printed by the money printer.
-GM.Config.mprintamount					= 250
+GM.Config.mprintamount					= 0
 -- normalsalary - Sets the starting salary for newly joined players.
-GM.Config.normalsalary					= 45
+GM.Config.normalsalary					= 90
 -- npckillpay - Sets the money given for each NPC kill.
 GM.Config.npckillpay					= 10
 -- paydelay - Sets how long it takes before people get salary
