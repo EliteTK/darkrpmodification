@@ -2,26 +2,22 @@ AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 include("shared.lua")
 
-ENT.SeizeReward = 950
+ENT.SeizeReward = 500
 
 local PrintMore
-function ENT:Initialize()
-self:SetModel("models/props_c17/consolebox01a.mdl")
-self:PhysicsInit(SOLID_VPHYSICS)
-self:SetMoveType(MOVETYPE_VPHYSICS)
-self:SetSolid(SOLID_VPHYSICS)
-local phys = self:GetPhysicsObject()
-phys:Wake()
+    function ENT:Initialize()
+        self:SetModel("models/props_c17/consolebox01a.mdl")
+        self:PhysicsInit(SOLID_VPHYSICS)
+        self:SetMoveType(MOVETYPE_VPHYSICS)
+        self:SetSolid(SOLID_VPHYSICS)
+        local phys = self:GetPhysicsObject()
+        phys:Wake()
 
-self.sparking = false
-self.damage = 100
-self.IsMoneyPrinter = true
-timer.Simple(math.random(100, 350), function() PrintMore(self) end)
-
-self.sound = CreateSound(self, Sound("ambient/levels/labs/equipment_printer_loop1.wav"))
-self.sound:SetSoundLevel(52)
-self.sound:PlayEx(1, 100)
-end
+        self.sparking = false
+        self.damage = 100
+        self.IsMoneyPrinter = true
+        timer.Simple(math.random(100, 350), function() PrintMore(self) end)
+    end
 
 function ENT:OnTakeDamage(dmg)
 if self.burningup then return end
@@ -89,7 +85,7 @@ local MoneyPos = self:GetPos()
 if GAMEMODE.Config.printeroverheat then
 local overheatchance
 if GAMEMODE.Config.printeroverheatchance <= 3 then
-overheatchance = 22
+overheatchance = 10
 else
 overheatchance = GAMEMODE.Config.printeroverheatchance or 22
 end
@@ -98,7 +94,7 @@ end
 
 local amount = GAMEMODE.Config.mprintamount
 if amount == 0 then
-amount = 250
+amount = 200
 end
 
 DarkRP.createMoneyBag(Vector(MoneyPos.x + 15, MoneyPos.y, MoneyPos.z + 15), amount)
