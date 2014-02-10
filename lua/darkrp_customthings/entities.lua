@@ -69,10 +69,10 @@ DarkRP.createEntity("Another test", {
 })
 
 DarkRP.createEntity("Novice Printer", {
-ent = "novice_printer",
-model = "models/props_c17/consolebox01a.mdl",
-price = 1000,
-max = 2,
-cmd = "buymoneyprinter"
+    ent = "novice_printer",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 1000,
+    max = 2,
+    cmd = "buymoneyprinter",
     buttonColor = Color(88, 88, 88, 255),
 })
