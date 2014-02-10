@@ -252,7 +252,7 @@ GM.Config.falldamagedamper				= 20
 -- falldamageamount - The base damage taken from falling for static fall damage. Default is 10
 GM.Config.falldamageamount				= 10
 -- printeroverheatchance - The likelyhood of a printer overheating. The higher this number, the less likely. Minimum 3. Default 22
-GM.Config.printeroverheatchance			= 22
+GM.Config.printeroverheatchance			= 0
 
 /*---------------------------------------------------------------------------
 Other settings
