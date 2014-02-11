@@ -25,7 +25,7 @@ TEAM_CITIZEN = DarkRP.createJob("Citizen", {
 	weapons = {},
 	command = "citizen",
 	max = 0,
-	salary = function(ply, price) return ply:GetUserGroup() == "donator" and 90 or 45 end,
+	salary = function(ply, salary) return ply:GetUserGroup() == "donator" and 90 or 45 end,
 	admin = 0,
 	vote = false,
 	hasLicense = false,
