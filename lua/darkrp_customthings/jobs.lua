@@ -147,10 +147,10 @@ TEAM_MAYOR = DarkRP.createJob("Mayor", {
 	hasLicense = false,
 	mayor = true,
 	
-	PlayerDeath = function(ply, weapon, killer)
+	PlayerDeath = function(ply, _, _)
             if( ply:Team() == TEAM_MAYOR ) then
                     ply:changeTeam( GAMEMODE.DefaultTeam, true )
-                    for k,v in pairs( player.GetAll() ) do
+                    for _ ,v in pairs( player.GetAll() ) do
                             v:PrintMessage( HUD_PRINTCENTER, "The mayor has been killed!" )
                     end
             end
@@ -231,7 +231,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
      
      TEAM_BLACK_MARKET_DEALER = DarkRP.createJob("Black Market Dealer", {
         color = Color(41, 41, 41, 255),
-        model = "models/player/phoenix.mdl",
+        model = "models/player/eli.mdl",
         description = [[You are to sell illegal goods to the mob and thieves to aid them in their ventures.]],
         weapons = {},
         command = "blackmarketdealer",
@@ -323,7 +323,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
      
      TEAM_ZOMBIE = DarkRP.createJob("Zombie", {
         color = Color(100, 0, 0, 255),
-        model = "models/player/Charple01.mdl",
+        model = "models/player/zombiefast.mdl",
         description = [[Bleh. You are a zombie.]],
         weapons = {"m9k_knife"},
         command = "bleh",
