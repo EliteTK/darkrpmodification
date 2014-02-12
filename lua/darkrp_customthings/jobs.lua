@@ -145,7 +145,7 @@ TEAM_MAYOR = DarkRP.createJob("Mayor", {
 	admin = 0,
 	vote = true,
 	hasLicense = false,
-	mayor = true
+	mayor = true,
 	
 	PlayerDeath = function(ply, weapon, killer)
             if( ply:Team() == TEAM_MAYOR ) then
