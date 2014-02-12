@@ -5,7 +5,11 @@ examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
 --]]
 
 
--- MISC
+--[[
+-- *******************
+-- MEDIC
+-- *******************
+--]]
 
 AddCustomShipment("Medical kits", {
     model = "models/Items/healthkit.mdl", 
@@ -45,25 +49,12 @@ AddCustomShipment("Medical vials", {
     getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
-AddCustomShipment("Armour kits", {
-    model = "models/Items/battery.mdl", 
-    entity = "spawned_armor",
-    price = 1000,
-    amount = 10,
-    separate = false, 
-    pricesep = 150, 
-    noship = false, 
-    allowed = {TEAM_BLACK_MARKET_DEALER, TEAM_SWAT_LEADER},
-    shipmodel = "models/items/item_item_crate.mdl",
-    weight = 15, 
-    buttonColor = Color(80, 80, 255, 255), 
-    label = "Armour kits",
-    
-    shipmentClass = "spawned_shipment",
-    onBought = function(ply, shipment, ent) end,
-    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
-})
 
+--[[
+-- *******************
+-- AMMO
+-- *******************
+--]]
 
 AddCustomShipment("Pistol ammo", {
     model = "models/Items/BoxSRounds.mdl", 
@@ -198,6 +189,12 @@ AddCustomShipment("winchester ammo", {
     onBought = function(ply, shipment, ent) end,
     getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
+
+--[[
+-- *******************
+-- MISC WEAPON
+-- *******************
+--]]
 
 AddCustomShipment("Knife", {
     model = "models/weapons/w_extreme_ratio.mdl", 
@@ -1050,6 +1047,25 @@ AddCustomShipment("Silenced Keypad Cracker", {
     buttonColor = Color(88, 88, 88, 255),
     label = "Silenced Keypad Cracker",
     customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Armour kits", {
+    model = "models/Items/battery.mdl", 
+    entity = "spawned_armor",
+    price = 1000,
+    amount = 10,
+    separate = false, 
+    pricesep = 150, 
+    noship = false, 
+    allowed = {TEAM_BLACK_MARKET_DEALER, TEAM_SWAT_LEADER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15, 
+    buttonColor = Color(80, 80, 255, 255), 
+    label = "Armour kits",
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
