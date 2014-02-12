@@ -134,15 +134,27 @@ TEAM_MAYOR = DarkRP.createJob("Mayor", {
 	Type /lockdown initiate a lockdown of the city.
 	Everyone must be inside during a lockdown.
 	The cops patrol the area.
-	/unlockdown to end a lockdown]],
+	/unlockdown to end a lockdown.
+	NOTE: Updon death you will become a citizen
+	Allowed gun: No
+	Allowed to raid: No]],
 	weapons = {},
 	command = "mayor",
 	max = 1,
-	salary = 85,
+	salary = 150,
 	admin = 0,
 	vote = true,
 	hasLicense = false,
 	mayor = true
+	
+	PlayerDeath = function(ply, weapon, killer)
+            if( ply:Team() == TEAM_MAYOR ) then
+                    ply:changeTeam( GAMEMODE.DefaultTeam, true )
+                    for k,v in pairs( player.GetAll() ) do
+                            v:PrintMessage( HUD_PRINTCENTER, "The mayor has been killed!" )
+                    end
+            end
+        end
 })
 
 TEAM_HOBO = DarkRP.createJob("Hobo", {
