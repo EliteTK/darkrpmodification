@@ -231,7 +231,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
      
      TEAM_BLACK_MARKET_DEALER = DarkRP.createJob("Black Market Dealer", {
         color = Color(41, 41, 41, 255),
-        model = "models/player/eli.mdl",
+        model = "models/player/phoenix.mdl",
         description = [[You are to sell illegal goods to the mob and thieves to aid them in their ventures.]],
         weapons = {},
         command = "blackmarketdealer",
@@ -323,7 +323,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
      
      TEAM_ZOMBIE = DarkRP.createJob("Zombie", {
         color = Color(100, 0, 0, 255),
-        model = "models/player/zombiefast.mdl",
+        model = "models/player/Charple01.mdl",
         description = [[Bleh. You are a zombie.]],
         weapons = {"m9k_knife"},
         command = "bleh",
