@@ -99,7 +99,6 @@ TEAM_MEDIC = DarkRP.createJob("Medic", {
 	         "models/player/Group03m/Female_03.mdl",
 	         "models/player/Group03m/Female_04.mdl",
 	         "models/player/Group03m/Female_06.mdl",
-	         "models/player/Group03m/Female_07.mdl",
 	         "models/player/Group03m/Male_01.mdl",
 	         "models/player/Group03m/Male_02.mdl",
 	         "models/player/Group03m/Male_03.mdl",
