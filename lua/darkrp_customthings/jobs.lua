@@ -30,6 +30,7 @@ TEAM_CITIZEN = DarkRP.createJob("Citizen", {
 	vote = false,
 	hasLicense = false,
 	candemote = false
+	customCheck = function(ply, salary) return ply:GetUserGroup() == "donator" and salary * 2 or salary end,
 })
 
 TEAM_GANG = DarkRP.createJob("Gangster", {
