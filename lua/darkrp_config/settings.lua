@@ -278,7 +278,7 @@ GM.Config.DefaultPlayerGroups = {
 
 -- Custom modules in this addon that are disabled.
 GM.Config.DisabledCustomModules = {
-       ["hudreplacement"] = false,
+       ["hudreplacement"] = true,
        ["extraf4tab"] = false,
 }
 
