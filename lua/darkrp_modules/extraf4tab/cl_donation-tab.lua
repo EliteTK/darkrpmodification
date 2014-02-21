@@ -1,4 +1,4 @@
-local url = "http://www.sanger.dk/"
+local url = "http://i.imgur.com/IFe3dhg.gif"
 local tabName = "Donations"
 
 
