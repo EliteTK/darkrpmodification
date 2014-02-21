@@ -81,7 +81,7 @@ local invy= 1/y
 	
 	-- Salary
     local Salary = DarkRP.getPhrase("salary", GAMEMODE.Config.currency, (LocalPlayer():getDarkRPVar("salary") or 0))
-    function(ply) return ply:GetUserGroup() == "donator" and math.ceil(Salary * 1.5) or Salary end
+    function(ply, Salary) return ply:GetUserGroup() == "donator" and math.ceil(Salary * 1.5) or Salary end
     draw.RoundedBox(10, 250 * x, ScrH()- (100 * y), 200 * x, 25 * y, Color(0, 0, 0, 200))
     draw.DrawText(Salary, "HudSelectionText", 350 * x, ScrH()- (95 * y), Color(255,255,255,255),TEXT_ALIGN_CENTER)
 end
