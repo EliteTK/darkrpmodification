@@ -293,6 +293,19 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
         chief = true,
         NeedToChangeFrom = TEAM_CP,
      })
+     
+     TEAM_ZOMBIE = DarkRP.createJob("Rebel leader", {
+        color = Color(0, 100, 0, 255),
+        model = "models/dpfilms/metropolice/playermodels/pm_resistance_police.mdl",
+        description = [[Rebellion]],
+        weapons = {"unarrest_stick"},
+        command = "rebelleader",
+        max = 1,
+        salary = 45,
+        admin = 1,
+        vote = false,
+        hasLicense = false,
+     })
 
      TEAM_CAR_DEALER = DarkRP.createJob("Car dealer", {
         color = Color(0, 200, 50, 255),
@@ -322,7 +335,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
      
      TEAM_ZOMBIE = DarkRP.createJob("Zombie", {
         color = Color(100, 0, 0, 255),
-        model = "models/player/Charple01.mdl",
+        model = "models/player/zombie_classic.mdl",
         description = [[Bleh. You are a zombie.]],
         weapons = {"m9k_knife"},
         command = "bleh",
