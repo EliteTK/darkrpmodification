@@ -44,11 +44,11 @@ local invy= 1/y
 	draw.RoundedBox(10 , 10 * x, ScrH()-(135 * y), 450 * x, 125 * y, Color(0, 0, 0, 200))
 	       
 	-- Health 
-	draw.RoundedBox(10, 15 * x, ScrH() - (70 * y), 435 * x, 25 * y, Color(0,0,0,200))
+	draw.RoundedBox(5, 15 * x, ScrH() - (70 * y), 435 * x, 25 * y, Color(0,0,0,200))
 	local Health = LocalPlayer():Health()
     local DrawHealth = math.Min(Health / GAMEMODE.Config.startinghealth, 1)
     if Health != 0 then
-        draw.RoundedBox(10, 17 * x, ScrH() - (68 * y), 431 * DrawHealth * x, 21 * y, Color(255,0,0,100))
+        draw.RoundedBox(5, 17 * x, ScrH() - (68 * y), 431 * DrawHealth * x, 21 * y, Color(255,0,0,100))
     end
 	if Health < 0 then
 	Health = 0
@@ -56,11 +56,11 @@ local invy= 1/y
     draw.DrawText("Health: " .. Health, "HudSelectionText",235 * x, ScrH() - (65 * y), Color(255,255,255,255), TEXT_ALIGN_CENTER)
        
     -- Armor
-    draw.RoundedBox(10, 15 * x, ScrH() - (40 * y), 435 * x, 25 * y, Color(0,0,0,200))
+    draw.RoundedBox(5, 15 * x, ScrH() - (40 * y), 435 * x, 25 * y, Color(0,0,0,200))
        
     local armor = LocalPlayer():Armor()
     if armor != 0 then
-	    draw.RoundedBox(10, 17 * x, ScrH() - (38 * y), (431 * armor / 100) * x, 21 * y, Color(0,130,255,100))
+	    draw.RoundedBox(5, 17 * x, ScrH() - (38 * y), (431 * armor / 100) * x, 21 * y, Color(0,130,255,100))
         end
     draw.DrawText("Armor: " .. armor, "HudSelectionText",235 * x, ScrH() - (35 * y), Color(255,255,255,255), TEXT_ALIGN_CENTER)
 	
