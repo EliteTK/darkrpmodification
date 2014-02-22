@@ -382,7 +382,7 @@ GM.Config.afkdemotetime = 600
 Hitmenu module
 ---------------------------------------------------------------------------*/
 -- The minimum price for a hit
-GM.Config.minHitPrice = 500
+GM.Config.minHitPrice = 1500
 -- The minimum distance between a hitman and his customer when they make the deal
 GM.Config.minHitDistance = 150
 -- The text that tells the player he can press use on the hitman to request a hit
