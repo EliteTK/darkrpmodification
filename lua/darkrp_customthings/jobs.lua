@@ -3,6 +3,33 @@ defaults: https://github.com/FPtje/DarkRP/blob/master/gamemode/config/jobrelated
 wiki: http://wiki.darkrp.com/index.php/DarkRP:CustomJobFields
 --]]
 
+     TEAM_ADMIN = DarkRP.createJob("Admin On Duty", {
+        color = Color(255, 0, 0, 255),
+        model = "models/player/combine_super_soldier.mdl",
+        description = [[Your an admin on duty, You know what to do, Dont abuse!]],
+        weapons = {"arrest_stick", "unarrest_stick", "m9k_deagle", "stunstick", "door_ram", "weaponchecker", "paydaybaton"},
+        command = "admin",
+        max = 4,
+        salary = 0,
+        admin = 1,
+        vote = false,
+        hasLicense = true,
+     })
+     
+    TEAM_MOD = DarkRP.createJob("Moderator On Duty", {
+        color = Color(255, 0, 0, 255),
+        model = "models/player/combine_super_soldier.mdl",
+        description = [[Your an admin on duty, You know what to do, Dont abuse!]],
+        weapons = {"arrest_stick", "unarrest_stick", "m9k_deagle", "stunstick", "door_ram", "weaponchecker", "paydaybaton"},
+        command = "admin",
+        max = 4,
+        salary = 0,
+        admin = 1,
+        vote = false,
+        hasLicense = true,
+        customCheck = function(ply) return ply:IsUserGroup("moderator") end,
+     })
+
 TEAM_CITIZEN = DarkRP.createJob("Citizen", {
 	color = Color(20, 150, 20, 255),
 	model = {
@@ -175,18 +202,24 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
 	hobo = true
 })
 
-     TEAM_ADMIN = DarkRP.createJob("Admin On Duty", {
-        color = Color(255, 0, 0, 255),
-        model = "models/player/combine_super_soldier.mdl",
-        description = [[Your an admin on duty, You know what to do, Dont abuse!]],
-        weapons = {"arrest_stick", "unarrest_stick", "m9k_deagle", "stunstick", "door_ram", "weaponchecker", "paydaybaton"},
-        command = "admin",
-        max = 4,
-        salary = 0,
-        admin = 1,
-        vote = false,
-        hasLicense = true,
-     })
+TEAM_DRUG_DEALER = DarkRP.createJob("Drug Dealer", {
+	color = Color(80, 45, 0, 255),
+	model = "models/player/corpse1.mdl",
+	description = [[The lowest member of society. Everybody laughs at you.
+		You have no home.
+		Beg for your food and money
+		Sing for everyone who passes to get money
+		Make your own wooden home somewhere in a corner or outside someone else's door]],
+	weapons = {},
+	command = "drugdealer",
+	max = 2,
+	salary = 35,
+	admin = 0,
+	vote = false,
+	hasLicense = false,
+	candemote = false,
+})
+
      
      TEAM_THIEF = DarkRP.createJob("Thief", {
         color = Color(80, 80, 80, 255),
@@ -205,7 +238,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
         color = Color(0,0, 139, 255),
         model = "models/player/swat.mdl",
         description = [[Your duty is for heavy strikes when needed. You should stay in the PD until backup is needed. Do everything you can to keep the city safe.]],
-        weapons = {"arrest_stick", "unarrest_stick", "m9k_usp", "m9k_m4a1", "m9k_mp5", "stunstick", "door_ram", "weaponchecker"},
+        weapons = {"arrest_stick", "unarrest_stick", "m9k_usp", "m9k_m4a1", "stunstick", "door_ram", "weaponchecker"},
         command = "swat",
         max = 3,
         salary = 100,
@@ -218,7 +251,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
         color = Color(25, 25, 112, 255),
         model = "models/player/gasmask.mdl",
         description = [[Your duty is for heavy strikes when needed. You should stay in the PD until backup is needed. Do everything you can to keep the city safe.]],
-        weapons = {"arrest_stick", "unarrest_stick", "m9k_usp", "m9k_m4a1", "m9k_mp5", "m9k_m98b", "stunstick", "door_ram", "weaponchecker"},
+        weapons = {"arrest_stick", "unarrest_stick", "m9k_usp", "m9k_m4a1", "m9k_m98b", "stunstick", "door_ram", "weaponchecker"},
         command = "swatleader",
         max = 1,
         salary = 125,
