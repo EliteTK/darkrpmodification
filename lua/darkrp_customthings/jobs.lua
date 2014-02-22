@@ -24,7 +24,7 @@ wiki: http://wiki.darkrp.com/index.php/DarkRP:CustomJobFields
         command = "admin",
         max = 4,
         salary = 0,
-        admin = 1,
+        admin = 0,
         vote = false,
         hasLicense = true,
         customCheck = function(ply) return ply:IsUserGroup("moderator") end,
