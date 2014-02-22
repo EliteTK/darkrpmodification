@@ -294,14 +294,41 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
         NeedToChangeFrom = TEAM_CP,
      })
      
-     TEAM_ZOMBIE = DarkRP.createJob("Rebel leader", {
+     TEAM_REBEL_LEADER = DarkRP.createJob("Rebel leader", {
         color = Color(0, 100, 0, 255),
         model = "models/dpfilms/metropolice/playermodels/pm_resistance_police.mdl",
         description = [[Rebellion]],
         weapons = {"unarrest_stick"},
         command = "rebelleader",
         max = 1,
-        salary = 45,
+        salary = 55,
+        admin = 1,
+        vote = false,
+        hasLicense = false,
+        NeedToChangeFrom = TEAM_REBEL,
+     })
+     
+     TEAM_REBEL = DarkRP.createJob("Rebel", {
+        color = Color(0, 150, 0, 255),
+        model = {"models/player/Group03/Female_01.mdl",
+		"models/player/Group03/Female_02.mdl",
+		"models/player/Group03/Female_03.mdl",
+		"models/player/Group03/Female_04.mdl",
+		"models/player/Group03/Female_06.mdl",
+		"models/player/group03/male_01.mdl",
+		"models/player/Group03/Male_02.mdl",
+		"models/player/Group03/male_03.mdl",
+		"models/player/Group03/Male_04.mdl",
+		"models/player/Group03/Male_05.mdl",
+		"models/player/Group03/Male_06.mdl",
+		"models/player/Group03/Male_07.mdl",
+		"models/player/Group03/Male_08.mdl",
+		"models/player/Group03/Male_09.mdl"},
+        description = [[Rebellion]],
+        weapons = {"unarrest_stick"},
+        command = "rebel",
+        max = 5,
+        salary = 35,
         admin = 1,
         vote = false,
         hasLicense = false,
@@ -335,7 +362,8 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
      
      TEAM_ZOMBIE = DarkRP.createJob("Zombie", {
         color = Color(100, 0, 0, 255),
-        model = "models/player/zombie_classic.mdl",
+        model = {"models/player/zombie_classic.mdl"
+        	 "models/dpfilms/metropolice/playermodels/pm_zombie_police.mdl"},
         description = [[Bleh. You are a zombie.]],
         weapons = {"m9k_knife"},
         command = "bleh",
