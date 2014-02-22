@@ -19,8 +19,8 @@ wiki: http://wiki.darkrp.com/index.php/DarkRP:CustomJobFields
     TEAM_MOD = DarkRP.createJob("Moderator On Duty", {
         color = Color(255, 0, 0, 255),
         model = "models/player/combine_super_soldier.mdl",
-        description = [[Your an admin on duty, You know what to do, Dont abuse!]],
-        weapons = {"arrest_stick", "unarrest_stick", "m9k_deagle", "stunstick", "door_ram", "weaponchecker", "paydaybaton"},
+        description = [[Your a moderator on duty, You know what to do, Dont abuse!]],
+        weapons = {"arrest_stick", "unarrest_stick", "m9k_deagle", "stunstick", "door_ram", "weaponchecker"},
         command = "admin",
         max = 4,
         salary = 0,
