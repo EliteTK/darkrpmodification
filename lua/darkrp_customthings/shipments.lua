@@ -1090,3 +1090,160 @@ AddCustomShipment("Armour kits", {
     getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
+--[[
+-- *******************
+-- DRUG DEALER
+-- *******************
+--]]
+
+AddCustomShipment("Marijuana", {
+    model = "models/katharsmodels/contraband/zak_wiet/zak_wiet.mdl",
+    entity = "durgz_weed",
+    price = 1500,
+    amount = 10,
+    separate = false,
+    pricesep = 200,
+    noship = false,
+    allowed = {TEAM_DRUG_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15,
+    buttonColor = Color(88, 88, 88, 255),
+    label = "Marijuana",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("LSD", {
+    model = "models/smile/smile.mdl",
+    entity = "durgz_lsd",
+    price = 1750,
+    amount = 10,
+    separate = false,
+    pricesep = 200,
+    noship = false,
+    allowed = {TEAM_DRUG_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15,
+    buttonColor = Color(88, 88, 88, 255),
+    label = "LSD",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Magic Mushrooms", {
+    model = "models/ipha/mushroom_small.mdl",
+    entity = "durgz_mushroom",
+    price = 1750,
+    amount = 10,
+    separate = false,
+    pricesep = 200,
+    noship = false,
+    allowed = {TEAM_DRUG_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15,
+    buttonColor = Color(88, 88, 88, 255),
+    label = "Magic Mushsrooms",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Aspirin", {
+    model = "models/jaanus/aspbtl.mdl",
+    entity = "durgz_aspirin",
+    price = 1250,
+    amount = 10,
+    separate = false,
+    pricesep = 200,
+    noship = false,
+    allowed = {TEAM_DRUG_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15,
+    buttonColor = Color(88, 88, 88, 255),
+    label = "Aspirin",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Heroin", {
+    model = "models/katharsmodels/syringe_out/syringe_out.mdl",
+    entity = "durgz_heroine",
+    price = 2000,
+    amount = 10,
+    separate = false,
+    pricesep = 200,
+    noship = false,
+    allowed = {TEAM_DRUG_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15,
+    buttonColor = Color(88, 88, 88, 255),
+    label = "Heroin",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Alcohol", {
+    model = "models/drug_mod/alcohol_can.mdl",
+    entity = "durgz_alcohol",
+    price = 1250,
+    amount = 10,
+    separate = false,
+    pricesep = 200,
+    noship = false,
+    allowed = {TEAM_DRUG_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15,
+    buttonColor = Color(88, 88, 88, 255),
+    label = "Alcohol",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Cigarettes", {
+    model = "models/boxopencigshib.mdl",
+    entity = "durgz_cigarette",
+    price = 1250,
+    amount = 10,
+    separate = false,
+    pricesep = 200,
+    noship = false,
+    allowed = {TEAM_DRUG_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15,
+    buttonColor = Color(88, 88, 88, 255),
+    label = "Cigarettes",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Water", {
+    model = "models/drug_mod/the_bottle_of_water.mdl",
+    entity = "durgz_water",
+    price = 1000,
+    amount = 10,
+    separate = false,
+    pricesep = 200,
+    noship = false,
+    allowed = {TEAM_DRUG_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15,
+    buttonColor = Color(0, 120, 255, 255),
+    label = "Water",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
