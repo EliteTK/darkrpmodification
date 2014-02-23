@@ -395,7 +395,7 @@ TEAM_DRUG_DEALER = DarkRP.createJob("Drug Dealer", {
      
      TEAM_ZOMBIE = DarkRP.createJob("Zombie", {
         color = Color(100, 0, 0, 255),
-        model = {"models/player/zombie_classic.mdl"
+        model = {"models/player/zombie_classic.mdl",
         	 "models/dpfilms/metropolice/playermodels/pm_zombie_police.mdl"},
         description = [[Bleh. You are a zombie.]],
         weapons = {"m9k_knife"},
