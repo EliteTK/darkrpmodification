@@ -84,7 +84,7 @@ local invy= 1/y
     draw.RoundedBox(10, 250 * x, ScrH()- (100 * y), 200 * x, 25 * y, Color(0, 0, 0, 200))
     hook.Add( "playerGetSalary", "Donator Salary", function ( ply, amount )
         if ( ply:GetUserGroup() == "donator" ) then
-            new_amount = math.ceil(amount * 1.5)
+            salary = math.ceil(amount * 1.5)
         end
     end
     draw.DrawText(Salary, "HudSelectionText", 350 * x, ScrH()- (95 * y), Color(255,255,255,255),TEXT_ALIGN_CENTER)
