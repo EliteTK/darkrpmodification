@@ -169,7 +169,7 @@ TEAM_MAYOR = DarkRP.createJob("Mayor", {
 	max = 1,
 	salary = 150,
 	admin = 0,
-	vote = true,
+	vote = false,
 	hasLicense = false,
 	mayor = true,
 	
@@ -204,7 +204,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
 
 TEAM_DRUG_DEALER = DarkRP.createJob("Drug Dealer", {
 	color = Color(80, 45, 0, 255),
-	model = "models/player/corpse1.mdl",
+	model = "models/player/Group03/Male_09.mdl",
 	description = [[The lowest member of society. Everybody laughs at you.
 		You have no home.
 		Beg for your food and money
@@ -243,7 +243,7 @@ TEAM_DRUG_DEALER = DarkRP.createJob("Drug Dealer", {
         max = 3,
         salary = 100,
         admin = 0,
-        vote = true,
+        vote = false,
         hasLicense = true,
      })
      
@@ -256,7 +256,7 @@ TEAM_DRUG_DEALER = DarkRP.createJob("Drug Dealer", {
         max = 1,
         salary = 125,
         admin = 0,
-        vote = true,
+        vote = false,
         hasLicense = true,
         NeedToChangeFrom = TEAM_SWAT,
      })
@@ -283,7 +283,7 @@ TEAM_DRUG_DEALER = DarkRP.createJob("Drug Dealer", {
         max = 2,
         salary = 30,
         admin = 0,
-        vote = true,
+        vote = false,
         hasLicense = false,
      })
      
@@ -302,7 +302,7 @@ TEAM_DRUG_DEALER = DarkRP.createJob("Drug Dealer", {
         max = 9,
         salary = 75,
         admin = 0,
-        vote = true,
+        vote = false,
         hasLicense = true,
      })
      
