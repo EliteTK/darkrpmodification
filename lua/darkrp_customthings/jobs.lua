@@ -21,13 +21,13 @@ wiki: http://wiki.darkrp.com/index.php/DarkRP:CustomJobFields
         model = "models/player/combine_super_soldier.mdl",
         description = [[Your a moderator on duty, You know what to do, Dont abuse!]],
         weapons = {"arrest_stick", "unarrest_stick", "m9k_deagle", "stunstick", "door_ram", "weaponchecker"},
-        command = "admin",
+        command = "moderator",
         max = 4,
         salary = 0,
         admin = 0,
         vote = false,
         hasLicense = true,
-        customCheck = function(ply) return ply:IsUserGroup("moderator") end,
+        customCheck = function(ply) return ply:IsUserGroup("moderator") or ply:IsUserGroup("admin") or ply:IsUserGroup("superadmin") end,
      })
 
 TEAM_CITIZEN = DarkRP.createJob("Citizen", {
