@@ -203,7 +203,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
 })
 
 TEAM_DRUG_DEALER = DarkRP.createJob("Drug Dealer", {
-	color = Color(80, 45, 0, 255),
+	color = Color(0, 255, 255, 255),
 	model = "models/player/Group03/Male_09.mdl",
 	description = [[The lowest member of society. Everybody laughs at you.
 		You have no home.
