@@ -83,7 +83,8 @@ local invy= 1/y
     local Salary = DarkRP.getPhrase("salary", GAMEMODE.Config.currency, (LocalPlayer():getDarkRPVar("salary") or 0))
     draw.RoundedBox(10, 250 * x, ScrH()- (100 * y), 200 * x, 25 * y, Color(0, 0, 0, 200))
     if ( ply:GetUserGroup() == "donator" ) then
-        new_amount = math.ceil(amount * 1.5)
+        salary = math.ceil(amount * 1.5)
+    end
     draw.DrawText(Salary, "HudSelectionText", 350 * x, ScrH()- (95 * y), Color(255,255,255,255),TEXT_ALIGN_CENTER)
 end
 hook.Add("HUDPaint", "DarkRP_Mod_HUDPaint", paintHud)
