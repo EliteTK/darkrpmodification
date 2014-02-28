@@ -28,11 +28,10 @@ hook.Add("HUDShouldDraw", "HideDefaultDarkRPHud", function(name)
 if hideHUDElements[name] then return false end
 end)
 
-
-/*---------------------------------------------------------------------------
+--[[
 Mark's HUD DESIGN 1
 Made by mark
----------------------------------------------------------------------------*/
+--]]
 
 local function paintHud()
 local x = ScrW()/1680
@@ -78,12 +77,13 @@ local y = ScrH()/1050
     draw.DrawText(Job, "HudSelectionText", 115 * x, ScrH() - (95 * y), Color(255,255,255,255), TEXT_ALIGN_CENTER)
 	
 	-- Salary
-    local Salary = DarkRP.getPhrase("salary", GAMEMODE.Config.currency, (LocalPlayer():getDarkRPVar("salary") or 0))
-    draw.RoundedBox(10, 250 * x, ScrH()- (100 * y), 200 * x, 25 * y, Color(0, 0, 0, 200))
-    local ply = LocalPlayer()
-    if ( ply:GetUserGroup() == "donator" ) then
-            salary = math.ceil(amount * 1.5)
+    local sal = (LocalPlayer():getDarkRPVar("salary") or 0)
+    if ( LocalPlayer():GetUserGroup() == "donator" and LocalPlayer():IsValid() ) then
+        sal = math.ceil( sal * 1.5 )
     end
+
+    local Salary = DarkRP.getPhrase("salary", GAMEMODE.Config.currency, sal) or "Error"
+    draw.RoundedBox(10, 250 * x, ScrH()- (100 * y), 200 * x, 25 * y, Color(0, 0, 0, 200))
     draw.DrawText(Salary, "HudSelectionText", 350 * x, ScrH()- (95 * y), Color(255,255,255,255),TEXT_ALIGN_CENTER)
 end
 hook.Add("HUDPaint", "DarkRP_Mod_HUDPaint", paintHud)
