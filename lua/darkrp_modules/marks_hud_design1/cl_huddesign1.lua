@@ -86,7 +86,7 @@ local invy= 1/y
         if ( ply:GetUserGroup() == "donator" ) then
             salary = math.ceil(amount * 1.5)
         end
-    end
+    end )
     draw.DrawText(Salary, "HudSelectionText", 350 * x, ScrH()- (95 * y), Color(255,255,255,255),TEXT_ALIGN_CENTER)
 end
 hook.Add("HUDPaint", "DarkRP_Mod_HUDPaint", paintHud)
