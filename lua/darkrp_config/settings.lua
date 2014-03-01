@@ -297,7 +297,8 @@ GM.Config.DisallowDrop = {
 	["weapon_keypadchecker"] = true,
 	["weapon_physcannon"] = true,
 	["weapon_physgun"] = true,
-	["weaponchecker"] = true
+	["weaponchecker"] = true,
+	["weapon_fists"] = true,
 }
 
 -- The list of weapons people spawn with
@@ -347,6 +348,7 @@ GM.Config.noStripWeapons = {
 	["weaponchecker"] = true,
 	["med_kit"] = true,
 	["pocket"] = true,
+	["weapon_fists"] = true,
 }
 
 -- Properties set to true are allowed to be used. Values set to false or are missing from this list are blocked.
