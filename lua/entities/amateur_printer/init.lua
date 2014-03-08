@@ -115,7 +115,7 @@ end
 
 function useCoolant(ent)
     if(not IsValid(ent)) then return end
-    ent.coolant = ent.coolant - math.random(ent.rates.min.coolant, ent.rates.max.coolant)
+    ent.coolant = ent.coolant - math.random(ent.rates.min.coolant, ent.rates.max.coolant)*(1+(100-ent.damage)/100)
     ent:SetNWInt("coolant", ent.coolant)
     timer.Simple(math.random(ent.times.min.coolant, ent.times.max.coolant), function() useCoolant(ent) end)
 end
@@ -123,6 +123,7 @@ end
 function coolantDamage(ent)
     if(not IsValid(ent)) then return end
     if(ent.coolant <= 0) then ent:TakeDamage(5, self, self) end
+    ent:SetNWInt("health", ent.damage)
     timer.Simple(1, function() coolantDamage(ent) end)
 end
 
