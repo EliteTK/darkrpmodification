@@ -224,10 +224,10 @@ AddCustomShipment("Knife", {
 AddCustomShipment("USP", {
     model = "models/weapons/w_pist_fokkususp.mdl", 
     entity = "m9k_usp", 
-    price = 1300,
+    price = 5500,
     amount = 10,
     separate = true, 
-    pricesep = 140, 
+    pricesep = 600, 
     noship = false, 
     allowed = {TEAM_GUN},
     shipmodel = "models/items/item_item_crate.mdl", 
@@ -243,10 +243,10 @@ AddCustomShipment("USP", {
 AddCustomShipment("colt 1911", {
     model = "models/weapons/s_dmgf_co1911.mdl", 
     entity = "m9k_colt1911", 
-    price = 1100, 
+    price = 3500, 
     amount = 10, 
     separate = true, 
-    pricesep = 120, 
+    pricesep = 400, 
     noship = false, 
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
@@ -262,10 +262,10 @@ AddCustomShipment("colt 1911", {
 AddCustomShipment("Glock 18", {
     model = "models/weapons/w_dmg_glock.mdl", 
     entity = "m9k_glock", 
-    price = 1750, 
+    price = 6500, 
     amount = 10, 
     separate = true, 
-    pricesep = 190, 
+    pricesep = 600, 
     noship = false, 
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
@@ -281,10 +281,10 @@ AddCustomShipment("Glock 18", {
 AddCustomShipment("Smith and wesson model 500", {
     model = "models/weapons/w_sw_model_500.mdl", 
     entity = "m9k_model500", 
-    price = 1600, 
+    price = 6000, 
     amount = 10, 
     separate = true, 
-    pricesep = 170, 
+    pricesep = 650, 
     noship = false, 
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
@@ -300,10 +300,10 @@ AddCustomShipment("Smith and wesson model 500", {
 AddCustomShipment("Raging bull", {
     model = "models/weapons/w_taurus_raging_bull.mdl", 
     entity = "m9k_ragingbull", 
-    price = 1800, 
+    price = 6500, 
     amount = 10, 
     separate = true, 
-    pricesep = 230, 
+    pricesep = 700, 
     noship = false, 
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
@@ -319,10 +319,10 @@ AddCustomShipment("Raging bull", {
 AddCustomShipment("P229", {
     model = "models/weapons/w_sig_229r.mdl", 
     entity = "m9k_sig_p229r", 
-    price = 1500, 
+    price = 5000, 
     amount = 10, 
     separate = true, 
-    pricesep = 160, 
+    pricesep = 550, 
     noship = false, 
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
@@ -338,10 +338,10 @@ AddCustomShipment("P229", {
 AddCustomShipment("HK45C", {
     model = "models/weapons/w_hk45c.mdl", 
     entity = "m9k_hk45", 
-    price = 1650, 
+    price = 5250, 
     amount = 10, 
     separate = true, 
-    pricesep = 175, 
+    pricesep = 575, 
     noship = false, 
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
@@ -363,10 +363,10 @@ AddCustomShipment("HK45C", {
 AddCustomShipment("Raging bull scoped", {
     model = "models/weapons/w_raging_bull_scoped.mdl", 
     entity = "m9k_scoped_taurus", 
-    price = 1900, 
+    price = 6500, 
     amount = 10, 
     separate = true, 
-    pricesep = 200, 
+    pricesep = 700, 
     noship = false, 
     allowed = {TEAM_GUN}, 
     shipmodel = "models/items/item_item_crate.mdl", 
@@ -389,7 +389,7 @@ AddCustomShipment("Raging bull scoped", {
 AddCustomShipment("KAC PDW", {
     model = "models/weapons/w_kac_pdw.mdl", 
     entity = "m9k_kac_pdw", 
-    price = 2300, 
+    price = 8100, 
     amount = 10, 
     separate = false, 
     pricesep = 210, 
@@ -408,7 +408,7 @@ AddCustomShipment("KAC PDW", {
 AddCustomShipment("P90", {
     model = "models/weapons/w_fn_p90.mdl", 
     entity = "m9k_smgp90", 
-    price = 2150, 
+    price = 7900, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -427,7 +427,7 @@ AddCustomShipment("P90", {
 AddCustomShipment("USC", {
     model = "models/weapons/w_hk_usc.mdl", 
     entity = "m9k_usc", 
-    price = 2200, 
+    price = 7700, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -446,7 +446,7 @@ AddCustomShipment("USC", {
 AddCustomShipment("MP40", {
     model = "models/weapons/w_mp40smg.mdl", 
     entity = "m9k_mp40", 
-    price = 2350, 
+    price = 8300, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -465,7 +465,7 @@ AddCustomShipment("MP40", {
 AddCustomShipment("UZI", {
     model = "models/weapons/w_uzi_imi.mdl", 
     entity = "m9k_uzi", 
-    price = 1900, 
+    price = 7500, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -490,7 +490,7 @@ AddCustomShipment("UZI", {
 AddCustomShipment("Magpul PDR", {
     model = "models/weapons/w_magpul_pdr.mdl", 
     entity = "m9k_magpulpdr", 
-    price = 2350, 
+    price = 8000, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -510,7 +510,7 @@ AddCustomShipment("Magpul PDR", {
 AddCustomShipment("Honeybadger", {
     model = "models/weapons/w_aac_honeybadger.mdl", 
     entity = "m9k_honeybadger", 
-    price = 2100, 
+    price = 7200, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -530,7 +530,7 @@ AddCustomShipment("Honeybadger", {
 AddCustomShipment("KRISS vector", {
     model = "models/weapons/w_kriss_vector.mdl", 
     entity = "m9k_vector", 
-    price = 2450, 
+    price = 8300, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -550,7 +550,7 @@ AddCustomShipment("KRISS vector", {
 AddCustomShipment("Bizon PP19", {
     model = "models/weapons/w_pp19_bizon.mdl", 
     entity = "m9k_bizonp19", 
-    price = 2250, 
+    price = 8500, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -576,7 +576,7 @@ AddCustomShipment("Bizon PP19", {
 AddCustomShipment("M14", {
     model = "models/weapons/w_snip_m14sp.mdl", 
     entity = "m9k_m14sp", 
-    price = 2900, 
+    price = 10500, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -595,7 +595,7 @@ AddCustomShipment("M14", {
 AddCustomShipment("M4A1", {
     model = "models/weapons/w_m4a1_iron.mdl", 
     entity = "m9k_m4a1", 
-    price = 3000, 
+    price = 10750, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -614,7 +614,7 @@ AddCustomShipment("M4A1", {
 AddCustomShipment("HK416", {
     model = "models/weapons/w_hk_416.mdl", 
     entity = "m9k_m416", 
-    price = 3050, 
+    price = 11000, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -633,7 +633,7 @@ AddCustomShipment("HK416", {
 AddCustomShipment("Famas", {
     model = "models/weapons/w_tct_famas.mdl", 
     entity = "m9k_famas", 
-    price = 3000, 
+    price = 11250, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -652,7 +652,7 @@ AddCustomShipment("Famas", {
 AddCustomShipment("G36", {
     model = "models/weapons/w_hk_g36c.mdl", 
     entity = "m9k_g36", 
-    price = 3050, 
+    price = 11500, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -671,7 +671,7 @@ AddCustomShipment("G36", {
 AddCustomShipment("Winchester", {
     model = "models/weapons/w_winchester_1873.mdl", 
     entity = "m9k_winchester73", 
-    price = 3200, 
+    price = 10000, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -697,7 +697,7 @@ AddCustomShipment("Winchester", {
 AddCustomShipment("TAR21", {
     model = "models/weapons/w_imi_tar21.mdl", 
     entity = "m9k_tar21", 
-    price = 3200, 
+    price = 11750, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -717,7 +717,7 @@ AddCustomShipment("TAR21", {
 AddCustomShipment("L85", {
     model = "models/weapons/w_l85a2.mdl", 
     entity = "m9k_l85", 
-    price = 3100, 
+    price = 11500, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -737,7 +737,7 @@ AddCustomShipment("L85", {
 AddCustomShipment("M16A4", {
     model = "models/weapons/w_dmg_m16ag.mdl", 
     entity = "m9k_m16a4_acog", 
-    price = 3000, 
+    price = 11250, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -757,7 +757,7 @@ AddCustomShipment("M16A4", {
 AddCustomShipment("SCAR H", {
     model = "models/weapons/w_fn_scar_h.mdl", 
     entity = "m9k_scar", 
-    price = 3000, 
+    price = 11600, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -783,7 +783,7 @@ AddCustomShipment("SCAR H", {
 AddCustomShipment("Winchester 87", {
     model = "models/weapons/w_winchester_1887.mdl", 
     entity = "m9k_1887winchester", 
-    price = 4000, 
+    price = 8500, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -802,7 +802,7 @@ AddCustomShipment("Winchester 87", {
 AddCustomShipment("Remington 870", {
     model = "models/weapons/w_remington_870_tact.mdl", 
     entity = "m9k_remington870", 
-    price = 4100, 
+    price = 8750, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -827,7 +827,7 @@ AddCustomShipment("Remington 870", {
 AddCustomShipment("SPAS 12", {
     model = "models/weapons/w_remington_870_tact.mdl", 
     entity = "w_spas_12", 
-    price = 4550, 
+    price = 9750, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -853,7 +853,7 @@ AddCustomShipment("SPAS 12", {
 AddCustomShipment("M24", {
     model = "models/weapons/w_snip_m24_6.mdl", 
     entity = "m9k_m24", 
-    price = 5500, 
+    price = 14500, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -872,7 +872,7 @@ AddCustomShipment("M24", {
 AddCustomShipment("M98B", {
     model = "models/weapons/w_barrett_m98b.mdl", 
     entity = "m9k_m98b", 
-    price = 5350, 
+    price = 14000, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -897,7 +897,7 @@ AddCustomShipment("M98B", {
 AddCustomShipment("SVT 40", {
     model = "models/weapons/w_svt_40.mdl", 
     entity = "m9k_svt40", 
-    price = 5800, 
+    price = 15000, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -924,7 +924,7 @@ AddCustomShipment("SVT 40", {
 AddCustomShipment("FG 42", {
     model = "models/weapons/w_fg42.mdl", 
     entity = "m9k_fg42", 
-    price = 4050, 
+    price = 15500, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -943,7 +943,7 @@ AddCustomShipment("FG 42", {
 AddCustomShipment("PKM", {
     model = "models/weapons/w_mach_russ_pkm.mdl", 
     entity = "m9k_pkm", 
-    price = 4500, 
+    price = 17600, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
@@ -969,7 +969,7 @@ AddCustomShipment("PKM", {
 AddCustomShipment("M249", {
     model = "models/weapons/w_m249_machine_gun.mdl", 
     entity = "m9k_m249lmg", 
-    price = 4750, 
+    price = 20000, 
     amount = 10, 
     separate = false, 
     pricesep = 230, 
