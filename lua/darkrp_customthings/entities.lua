@@ -74,7 +74,7 @@ DarkRP.createEntity("Amateur Printer", {
     price = 1500,
     max = 10,
     cmd = "buyamateurprinter",
-    buttonColor = Color(88, 88, 88, 255),
+    buttonColor = Color(90, 50, 0, 255),
 })
 
 DarkRP.createEntity("Consumer Printer", {
@@ -83,7 +83,7 @@ DarkRP.createEntity("Consumer Printer", {
     price = 2500,
     max = 10,
     cmd = "buyconsumerprinter",
-    buttonColor = Color(88, 88, 88, 255),
+    buttonColor = Color(0, 140, 200, 255),
 })
 
 DarkRP.createEntity("High Performance Printer", {
@@ -92,7 +92,7 @@ DarkRP.createEntity("High Performance Printer", {
     price = 5000,
     max = 10,
     cmd = "buyhpprinter",
-    buttonColor = Color(88, 88, 88, 255),
+    buttonColor = Color(15, 120, 0, 255),
 })
 
 DarkRP.createEntity("Nuclear Printer", {
@@ -101,5 +101,5 @@ DarkRP.createEntity("Nuclear Printer", {
     price = 10000,
     max = 10,
     cmd = "buynuclearprinter",
-    buttonColor = Color(88, 88, 88, 255),
+    buttonColor = Color(50, 0, 120, 255),
 })
