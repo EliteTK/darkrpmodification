@@ -42,41 +42,48 @@ local function getscl_y(y, exp_screen_h)
     return ScrH() - getscll_y(y, exp_screen_h or 1050)
 end
 
-
-
+local alpha = 200;
 
 hook.Add("HUDPaint", "DarkRP_Mod_HUDPaint",function()
     -- Background
-    draw.RoundedBox(0, getscl_x(10), getscl_y(135), getscl_x(450), getscll_y(125), Color(0, 0, 0, 200))
+    draw.RoundedBox(0, getscl_x(10), getscl_y(135), getscl_x(450), getscll_y(125), Color(0, 0, 0, alpha))
+
+    --[[
+    BARS
+    --]]
 
     -- Health
-    draw.RoundedBox(0, getscl_x(15), getscl_y(70), getscl_x(435), getscll_y(25), Color(0,0,0,200))
+    draw.RoundedBox(0, getscl_x(15), getscl_y(70), getscl_x(440), getscll_y(25), Color(0,0,0, alpha))
     local health = LocalPlayer():Health()
     local bar_health = math.min(math.max(health, 0), 100) / GAMEMODE.Config.startinghealth
-    draw.RoundedBox(0, getscl_x(17), getscl_y(68), getscl_x(431)*bar_health, getscll_y(21), Color(255,0,0,100))
-    draw.DrawText("Health: " .. math.max(health, 0), "HudSelectionText", getscl_x(235), getscl_y(65), Color(255,255,255,255), TEXT_ALIGN_CENTER )
+    draw.RoundedBox(0, getscl_x(17), getscl_y(68), getscl_x(436)*bar_health, getscll_y(21), Color(255-255*bar_health,255*bar_health,0,alpha))
+    draw.DrawText("Health: " .. math.max(health, 0), "HudSelectionText", getscl_x(230), getscl_y(65), Color(255,255,255,alpha), TEXT_ALIGN_CENTER )
 
     -- Armor
-    draw.RoundedBox(0, getscl_x(15), getscl_y(40), getscl_x(435), getscll_y(25), Color(0,0,0,200))
+    draw.RoundedBox(0, getscl_x(15), getscl_y(40), getscl_x(440), getscll_y(25), Color(0,0,0,200))
     local armor = LocalPlayer():Armor()
     local bar_armor = math.min(math.max(armor, 0), 100) / 100
-    draw.RoundedBox(0, getscl_x(17), getscl_y(38), getscl_x(431)*bar_armor, getscll_y(21), Color(0,130,255,100))
-    draw.DrawText("Armor: " .. math.max(armor, 0), "HudSelectionText", getscl_x(235), getscl_y(35), Color(255,255,255,255), TEXT_ALIGN_CENTER)
+    draw.RoundedBox(0, getscl_x(17), getscl_y(38), getscl_x(436)*bar_armor, getscll_y(21), Color(0,130,255,alpha))
+    draw.DrawText("Armor: " .. math.max(armor, 0), "HudSelectionText", getscl_x(230), getscl_y(35), Color(255,255,255,alpha), TEXT_ALIGN_CENTER)
+
+    --[[
+    BOXES
+    --]]
 
     -- Name
-    draw.RoundedBox(0, getscl_x(15), getscl_y(130), getscl_x(200), getscll_y(25), Color(0, 0, 0, 200))
-    draw.DrawText(LocalPlayer():Nick(), "HudSelectionText", getscl_x(115), getscl_y(125), Color(255,255,255,255),TEXT_ALIGN_CENTER)
+    draw.RoundedBox(0, getscl_x(15), getscl_y(130), getscl_x(215), getscll_y(25), Color(0, 0, 0, alpha))
+    draw.DrawText(LocalPlayer():Nick(), "HudSelectionText", getscl_x(123), getscl_y(125), Color(255,255,255,alpha), TEXT_ALIGN_CENTER)
 
     -- Wallet
     local wallet = DarkRP.getPhrase("wallet", GAMEMODE.Config.currency, (LocalPlayer():getDarkRPVar("money") or 0))
-    draw.RoundedBox(0, getscl_x(250), getscl_y(130), getscl_x(200), getscll_y(25), Color(0,0,0,200))
-    draw.DrawText(wallet, "HudSelectionText", getscl_x(350), getscl_y(125), Color(255,255,255,255), TEXT_ALIGN_CENTER)
-    
+    draw.RoundedBox(0, getscl_x(240), getscl_y(130), getscl_x(215), getscll_y(25), Color(0,0,0,alpha))
+    draw.DrawText(wallet, "HudSelectionText", getscl_x(347), getscl_y(125), Color(255,255,255,alpha), TEXT_ALIGN_CENTER)
+
     -- Job
     local job = DarkRP.getPhrase("job", LocalPlayer():getDarkRPVar("job") or "")
-    draw.RoundedBox(0, getscl_x(15), getscl_y(100), getscl_x(200), getscll_y(25), team.GetColor(LocalPlayer():Team()))
-    draw.DrawText(job, "HudSelectionText", getscl_x(115), getscl_y(95), Color(255,255,255,255), TEXT_ALIGN_CENTER)
-    
+    draw.RoundedBox(0, getscl_x(15), getscl_y(100), getscl_x(215), getscll_y(25), team.GetColor(LocalPlayer():Team()))
+    draw.DrawText(job, "HudSelectionText", getscl_x(123), getscl_y(95), Color(255,255,255,alpha), TEXT_ALIGN_CENTER)
+
     -- Salary
     local salary = (LocalPlayer():getDarkRPVar("salary") or 0)
     if (LocalPlayer():GetUserGroup() == "donator") then
@@ -84,6 +91,6 @@ hook.Add("HUDPaint", "DarkRP_Mod_HUDPaint",function()
     end
 
     local written_salary = DarkRP.getPhrase("salary", GAMEMODE.Config.currency, salary) or "Error"
-    draw.RoundedBox(0, getscl_x(250), getscl_y(100), getscl_x(200), getscll_y(25), Color(0, 0, 0, 200))
-    draw.DrawText(written_salary, "HudSelectionText", getscl_x(350), getscl_y(95), Color(255,255,255,255),TEXT_ALIGN_CENTER)
+    draw.RoundedBox(0, getscl_x(240), getscl_y(100), getscl_x(215), getscll_y(25), Color(0, 0, 0, 200))
+    draw.DrawText(written_salary, "HudSelectionText", getscl_x(347), getscl_y(95), Color(255,255,255,255),TEXT_ALIGN_CENTER)
 end)
