@@ -68,11 +68,38 @@ DarkRP.createEntity("Another test", {
     allowed = {TEAM_ADMIN}
 })
 
-DarkRP.createEntity("Novice Printer", {
-    ent = "novice_printer",
+DarkRP.createEntity("Amateur Printer", {
+    ent = "amateur_printer",
     model = "models/props_c17/consolebox01a.mdl",
-    price = 1000,
-    max = 2,
-    cmd = "buymoneyprinter",
+    price = 1500,
+    max = 10,
+    cmd = "buyamateurprinter",
+    buttonColor = Color(88, 88, 88, 255),
+})
+
+DarkRP.createEntity("Consumer Printer", {
+    ent = "consumer_printer",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 2500,
+    max = 10,
+    cmd = "buyconsumerprinter",
+    buttonColor = Color(88, 88, 88, 255),
+})
+
+DarkRP.createEntity("High Performance Printer", {
+    ent = "hp_printer",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 5000,
+    max = 10,
+    cmd = "buyhpprinter",
+    buttonColor = Color(88, 88, 88, 255),
+})
+
+DarkRP.createEntity("Amateur Printer", {
+    ent = "nuclear_printer",
+    model = "models/props_c17/consolebox01a.mdl",
+    price = 10000,
+    max = 10,
+    cmd = "buynuclearprinter",
     buttonColor = Color(88, 88, 88, 255),
 })
