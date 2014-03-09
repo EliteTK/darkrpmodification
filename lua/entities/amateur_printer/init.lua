@@ -115,15 +115,25 @@ end
 
 function useCoolant(ent)
     if(not IsValid(ent)) then return end
-    ent.coolant = ent.coolant - math.random(ent.rates.min.coolant, ent.rates.max.coolant)*(1+(100-ent.damage)/100)
+    local needed_coolant = math.random(ent.rates.min.coolant, ent.rates.max.coolant)*(1+(100-ent.damage)/100)
+    for _, v in pairs(ents.FindInSphere(self:GetPos(), 70)) do
+        if(v.IsHeatExchanger and v:IsValid()) then
+            needed_coolant = needed_coolant - v:Exchange(needed_coolant)
+        end
+    end
+
+    ent.coolant = ent.coolant - needed_coolant
     ent:SetNWInt("coolant", ent.coolant)
     timer.Simple(math.random(ent.times.min.coolant, ent.times.max.coolant), function() useCoolant(ent) end)
 end
 
 function coolantDamage(ent)
     if(not IsValid(ent)) then return end
-    if(ent.coolant <= 0) then ent:TakeDamage(5, self, self) end
-    ent:SetNWInt("health", ent.damage)
+    if(ent.coolant <= 0) then
+        ent:TakeDamage(5, self, self)
+        DarkRP.notify(self:Getowning_ent(), 0, 4, DarkRP.getPhrase("money_printer_overheating"))
+        ent:SetNWInt("health", ent.damage)
+    end
     timer.Simple(1, function() coolantDamage(ent) end)
 end
 
@@ -131,7 +141,6 @@ function ENT:CreateMoneybag()
     if not IsValid(self) or self:IsOnFire() then return end
 
     local MoneyPos = self:GetPos()
-    local angles = self:GetAngles()
 
     DarkRP.createMoneyBag(MoneyPos, self.moneyStored * 0.2)
     self.moneyStored = 0
@@ -162,7 +171,6 @@ function ENT:Use( activator, caller )
         self.moneyStored = 0
         self:SetNWInt("money", self.moneyStored)
     end
-    Msg("Caller: "..caller:GetClass().."\n")
 end
 
 function ENT:OnRemove()
