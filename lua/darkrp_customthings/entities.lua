@@ -95,7 +95,7 @@ DarkRP.createEntity("High Performance Printer", {
     buttonColor = Color(88, 88, 88, 255),
 })
 
-DarkRP.createEntity("Amateur Printer", {
+DarkRP.createEntity("Nuclear Printer", {
     ent = "nuclear_printer",
     model = "models/props_c17/consolebox01a.mdl",
     price = 10000,
