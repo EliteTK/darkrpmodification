@@ -104,11 +104,11 @@ DarkRP.createEntity("Nuclear Printer", {
     buttonColor = Color(50, 0, 120, 255),
 })
 
-DarkRP.createEntity("Nuclear Printer", {
-    ent = "nuclear_printer",
+DarkRP.createEntity("Heat Exchanger", {
+    ent = "heat_exchanger",
     model = "models/props/cs_assault/ACUnit02.mdl",
     price = 2500,
     max = 10,
-    cmd = "buynuclearprinter",
+    cmd = "buyheatexchanger",
     buttonColor = Color(0, 80, 170, 255),
 })
