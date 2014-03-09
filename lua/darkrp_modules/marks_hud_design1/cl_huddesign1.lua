@@ -1,7 +1,3 @@
-/*---------------------------------------------------------------------------
-Which default HUD elements should be hidden?
----------------------------------------------------------------------------*/
-
 local hideHUDElements = {
 -- if you DarkRP_HUD this to true, ALL of DarkRP's HUD will be disabled. That is the health bar and stuff,
 -- but also the agenda, the voice chat icons, lockdown text, player arrested text and the names above players' heads

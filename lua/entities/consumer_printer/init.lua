@@ -1,11 +1,8 @@
-/*---------------------------------------------------------------------------
-This is an example of a custom entity.
----------------------------------------------------------------------------*/
 AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 include("shared.lua")
 
-ENT.SeizeReward = 950
+ENT.SeizeReward = 500
 
 local PrintMore
 function ENT:Initialize()
@@ -18,8 +15,41 @@ function ENT:Initialize()
 
 	self.sparking = false
 	self.damage = 100
+    self.coolant = 100
+    self.moneyStored = 0
+
+    --Printer Specific Variables
+    --Name: amateur_printer
+    --Buy price: 1500
+    --Expected profit: 750
+    --Expected running time: 10 minutes
+    --Total money return: 2250
+    self.times = { min = {}, max = {} }
+
+    self.times.min.money = 4
+    self.times.max.money = 6
+
+    self.times.min.coolant = 9
+    self.times.max.coolant = 11
+
+    self.rates = { min = {}, max = {} }
+
+    self.rates.min.coolant = 1.333333
+    self.rates.max.coolant = 2
+
+    self.rates.min.money = 17
+    self.rates.max.money = 20
+    --END
+
+    self:SetNWInt("coolant", self.coolant)
+    self:SetNWInt("health", self.damage)
+    self:SetNWInt("money", self.moneyStored)
+
 	self.IsMoneyPrinter = true
-	timer.Simple(math.random(100, 350), function() PrintMore(self) end)
+
+    timer.Simple(math.random(self.times.min.money, self.times.max.money), function() printMore(self) end)
+    timer.Simple(math.random(self.times.min.coolant, self.times.max.coolant), function() useCoolant(self) end)
+    coolantDamage(self)
 
 	self.sound = CreateSound(self, Sound("ambient/levels/labs/equipment_printer_loop1.wav"))
 	self.sound:SetSoundLevel(52)
@@ -30,6 +60,7 @@ function ENT:OnTakeDamage(dmg)
 	if self.burningup then return end
 
 	self.damage = (self.damage or 100) - dmg:GetDamage()
+    self:SetNWInt("health", self.damage)
 	if self.damage <= 0 then
 		local rnd = math.random(1, 10)
 		if rnd < 3 then
@@ -42,6 +73,7 @@ function ENT:OnTakeDamage(dmg)
 end
 
 function ENT:Destruct()
+    self:CreateMoneybag()
 	local vPoint = self:GetPos()
 	local effectdata = EffectData()
 	effectdata:SetStart(vPoint)
@@ -74,39 +106,36 @@ function ENT:Fireball()
 	self:Remove()
 end
 
-PrintMore = function(ent)
-	if not IsValid(ent) then return end
+function printMore(ent)
+	if(not IsValid(ent)) then return end
+    ent.moneyStored = ent.moneyStored + math.random(ent.rates.min.money, ent.rates.max.money)
+    ent:SetNWInt("money", ent.moneyStored)
+    timer.Simple(math.random(ent.times.min.money, ent.times.max.money), function() printMore(ent) end)
+end
 
-	ent.sparking = true
-	timer.Simple(3, function()
-		if not IsValid(ent) then return end
-		ent:CreateMoneybag()
-	end)
+function useCoolant(ent)
+    if(not IsValid(ent)) then return end
+    ent.coolant = ent.coolant - math.random(ent.rates.min.coolant, ent.rates.max.coolant)*(1+(100-ent.damage)/100)
+    ent:SetNWInt("coolant", ent.coolant)
+    timer.Simple(math.random(ent.times.min.coolant, ent.times.max.coolant), function() useCoolant(ent) end)
+end
+
+function coolantDamage(ent)
+    if(not IsValid(ent)) then return end
+    if(ent.coolant <= 0) then ent:TakeDamage(5, self, self) end
+    ent:SetNWInt("health", ent.damage)
+    timer.Simple(1, function() coolantDamage(ent) end)
 end
 
 function ENT:CreateMoneybag()
-	if not IsValid(self) or self:IsOnFire() then return end
+    if not IsValid(self) or self:IsOnFire() then return end
 
-	local MoneyPos = self:GetPos()
+    local MoneyPos = self:GetPos()
+    local angles = self:GetAngles()
 
-	if GAMEMODE.Config.printeroverheat then
-		local overheatchance
-		if GAMEMODE.Config.printeroverheatchance <= 3 then
-			overheatchance = 22
-		else
-			overheatchance = GAMEMODE.Config.printeroverheatchance or 22
-		end
-		if math.random(1, overheatchance) == 3 then self:BurstIntoFlames() end
-	end
-
-	local amount = GAMEMODE.Config.mprintamount
-	if amount == 0 then
-		amount = 250
-	end
-
-	DarkRP.createMoneyBag(Vector(MoneyPos.x + 15, MoneyPos.y, MoneyPos.z + 15), amount)
-	self.sparking = false
-	timer.Simple(math.random(100, 350), function() PrintMore(self) end)
+    DarkRP.createMoneyBag(MoneyPos, self.moneyStored * 0.2)
+    self.moneyStored = 0
+    self:SetNWInt("money", self.moneyStored)
 end
 
 function ENT:Think()
@@ -125,6 +154,15 @@ function ENT:Think()
 	effectdata:SetScale(1)
 	effectdata:SetRadius(2)
 	util.Effect("Sparks", effectdata)
+end
+
+function ENT:Use( activator, caller )
+    if (activator:IsPlayer()) then
+        activator:addMoney(self.moneyStored)
+        self.moneyStored = 0
+        self:SetNWInt("money", self.moneyStored)
+    end
+    Msg("Caller: "..caller:GetClass().."\n")
 end
 
 function ENT:OnRemove()
