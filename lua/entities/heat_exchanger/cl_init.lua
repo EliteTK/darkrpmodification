@@ -11,9 +11,7 @@ function ENT:Draw()
 
     local font = "HUDNumber5"
 
-    local owner = self:Getowning_ent()
     local text = {}
-    text.owner = (IsValid(owner) and owner:Nick()) or DarkRP.getPhrase("unknown")
 
     local attrib = {}
     attrib.max_capacity = 100

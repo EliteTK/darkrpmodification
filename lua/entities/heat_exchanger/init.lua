@@ -2,15 +2,13 @@ AddCSLuaFile("cl_init.lua")
 AddCSLuaFile("shared.lua")
 include("shared.lua")
 
-ENT.SeizeReward = 500
-
-local PrintMore
 function ENT:Initialize()
 	self:SetModel("models/props/cs_assault/ACUnit02.mdl")
 	self:PhysicsInit(SOLID_VPHYSICS)
 	self:SetMoveType(MOVETYPE_VPHYSICS)
 	self:SetSolid(SOLID_VPHYSICS)
 	local phys = self:GetPhysicsObject()
+    phys:SetMass( 100 )
 	phys:Wake()
 
 	self.damage = 100
@@ -41,10 +39,10 @@ function ENT:OnTakeDamage(dmg)
 end
 
 function ENT:Destruct()
-	local vPoint = self:GetPos()
+	local position = self:GetPos()
 	local effectdata = EffectData()
-	effectdata:SetStart(vPoint)
-	effectdata:SetOrigin(vPoint)
+	effectdata:SetStart(position)
+	effectdata:SetOrigin(position)
 	effectdata:SetScale(1)
 	util.Effect("Explosion", effectdata)
 end

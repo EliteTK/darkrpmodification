@@ -4,17 +4,16 @@ include("shared.lua")
 
 ENT.SeizeReward = 500
 
-local PrintMore
 function ENT:Initialize()
-	self:SetModel("models/props_c17/consolebox01a.mdl")
-	self:PhysicsInit(SOLID_VPHYSICS)
-	self:SetMoveType(MOVETYPE_VPHYSICS)
-	self:SetSolid(SOLID_VPHYSICS)
-	local phys = self:GetPhysicsObject()
-	phys:Wake()
+    self:SetModel("models/props_c17/consolebox01a.mdl")
+    self:PhysicsInit(SOLID_VPHYSICS)
+    self:SetMoveType(MOVETYPE_VPHYSICS)
+    self:SetSolid(SOLID_VPHYSICS)
+    local phys = self:GetPhysicsObject()
+    phys:Wake()
 
-	self.sparking = false
-	self.damage = 100
+    self.sparking = false
+    self.damage = 100
     self.coolant = 100
     self.moneyStored = 0
 
@@ -45,89 +44,91 @@ function ENT:Initialize()
     self:SetNWInt("health", self.damage)
     self:SetNWInt("money", self.moneyStored)
 
-	self.IsMoneyPrinter = true
+    self.IsMoneyPrinter = true
 
     timer.Simple(math.random(self.times.min.money, self.times.max.money), function() printMore(self) end)
     timer.Simple(math.random(self.times.min.coolant, self.times.max.coolant), function() useCoolant(self) end)
     coolantDamage(self)
 
-	self.sound = CreateSound(self, Sound("ambient/levels/labs/equipment_printer_loop1.wav"))
-	self.sound:SetSoundLevel(52)
-	self.sound:PlayEx(1, 100)
+    self.sound = CreateSound(self, Sound("ambient/levels/labs/equipment_printer_loop1.wav"))
+    self.sound:SetSoundLevel(52)
+    self.sound:PlayEx(1, 100)
 end
 
 function ENT:OnTakeDamage(dmg)
-	if self.burningup then return end
+    if self.burningup then return end
 
-	self.damage = (self.damage or 100) - dmg:GetDamage()
+    self.damage = (self.damage or 100) - dmg:GetDamage()
     self:SetNWInt("health", self.damage)
-	if self.damage <= 0 then
-		local rnd = math.random(1, 10)
-		if rnd < 3 then
-			self:BurstIntoFlames()
-		else
-			self:Destruct()
-			self:Remove()
-		end
-	end
+    if self.damage <= 0 then
+        local rnd = math.random(1, 10)
+        if rnd < 3 then
+            self:BurstIntoFlames()
+        else
+            self:Destruct()
+            self:Remove()
+        end
+    end
 end
 
 function ENT:Destruct()
     self:CreateMoneybag()
-	local vPoint = self:GetPos()
-	local effectdata = EffectData()
-	effectdata:SetStart(vPoint)
-	effectdata:SetOrigin(vPoint)
-	effectdata:SetScale(1)
-	util.Effect("Explosion", effectdata)
-	DarkRP.notify(self:Getowning_ent(), 1, 4, DarkRP.getPhrase("money_printer_exploded"))
+    local vPoint = self:GetPos()
+    local effectdata = EffectData()
+    effectdata:SetStart(vPoint)
+    effectdata:SetOrigin(vPoint)
+    effectdata:SetScale(1)
+    util.Effect("Explosion", effectdata)
+    DarkRP.notify(self:Getowning_ent(), 1, 4, DarkRP.getPhrase("money_printer_exploded"))
 end
 
 function ENT:BurstIntoFlames()
-	DarkRP.notify(self:Getowning_ent(), 0, 4, DarkRP.getPhrase("money_printer_overheating"))
-	self.burningup = true
-	local burntime = math.random(8, 18)
-	self:Ignite(burntime, 0)
-	timer.Simple(burntime, function() self:Fireball() end)
+    DarkRP.notify(self:Getowning_ent(), 0, 4, DarkRP.getPhrase("money_printer_overheating"))
+    self.burningup = true
+    local burntime = math.random(8, 18)
+    self:Ignite(burntime, 0)
+    timer.Simple(burntime, function() self:Fireball() end)
 end
 
 function ENT:Fireball()
-	if not self:IsOnFire() then self.burningup = false return end
-	local dist = math.random(20, 280) -- Explosion radius
-	self:Destruct()
-	for k, v in pairs(ents.FindInSphere(self:GetPos(), dist)) do
-		if not v:IsPlayer() and not v:IsWeapon() and v:GetClass() ~= "predicted_viewmodel" and not v.IsMoneyPrinter then
-			v:Ignite(math.random(5, 22), 0)
-		elseif v:IsPlayer() then
-			local distance = v:GetPos():Distance(self:GetPos())
-			v:TakeDamage(distance / dist * 100, self, self)
-		end
-	end
-	self:Remove()
+    if not self:IsOnFire() then self.burningup = false return end
+    local dist = math.random(20, 280) -- Explosion radius
+    self:Destruct()
+    for k, v in pairs(ents.FindInSphere(self:GetPos(), dist)) do
+        if not v:IsPlayer() and not v:IsWeapon() and v:GetClass() ~= "predicted_viewmodel" and not v.IsMoneyPrinter then
+            v:Ignite(math.random(5, 22), 0)
+        elseif v:IsPlayer() then
+            local distance = v:GetPos():Distance(self:GetPos())
+            v:TakeDamage(distance / dist * 100, self, self)
+        end
+    end
+    self:Remove()
 end
 
-function printMore(ent)
-	if(not IsValid(ent)) then return end
+local function printMore(ent)
+    if(not IsValid(ent)) then return end
     ent.moneyStored = ent.moneyStored + math.random(ent.rates.min.money, ent.rates.max.money)
     ent:SetNWInt("money", ent.moneyStored)
     timer.Simple(math.random(ent.times.min.money, ent.times.max.money), function() printMore(ent) end)
 end
 
-function useCoolant(ent)
+local function useCoolant(ent)
     if(not IsValid(ent)) then return end
-    local needed_coolant = math.random(ent.rates.min.coolant, ent.rates.max.coolant)*(1+(100-ent.damage)/100)
-    for _, v in pairs(ents.FindInSphere(self:GetPos(), 70)) do
-        if(v.IsHeatExchanger and v:IsValid()) then
+    local needed_coolant = math.random(ent.rates.min.coolant, ent.rates.max.coolant)
+    local leaked_coolant = needed_coolant * ent.damage / 100
+    for _, v in pairs(ents.FindInSphere(ent:GetPos(), 1000000000)) do
+        Msg("Found entity at pos"..v:GetPos().."\n")
+        if(v.IsHeatExchanger) then
             needed_coolant = needed_coolant - v:Exchange(needed_coolant)
         end
     end
 
-    ent.coolant = ent.coolant - needed_coolant
+    ent.coolant = ent.coolant - needed_coolant - leaked_coolant
     ent:SetNWInt("coolant", ent.coolant)
     timer.Simple(math.random(ent.times.min.coolant, ent.times.max.coolant), function() useCoolant(ent) end)
 end
 
-function coolantDamage(ent)
+local function coolantDamage(ent)
     if(not IsValid(ent)) then return end
     if(ent.coolant <= 0) then
         ent:TakeDamage(5, self, self)
@@ -149,20 +150,20 @@ end
 
 function ENT:Think()
 
-	if self:WaterLevel() > 0 then
-		self:Destruct()
-		self:Remove()
-		return
-	end
+    if self:WaterLevel() > 0 then
+        self:Destruct()
+        self:Remove()
+        return
+    end
 
-	if not self.sparking then return end
+    if not self.sparking then return end
 
-	local effectdata = EffectData()
-	effectdata:SetOrigin(self:GetPos())
-	effectdata:SetMagnitude(1)
-	effectdata:SetScale(1)
-	effectdata:SetRadius(2)
-	util.Effect("Sparks", effectdata)
+    local effectdata = EffectData()
+    effectdata:SetOrigin(self:GetPos())
+    effectdata:SetMagnitude(1)
+    effectdata:SetScale(1)
+    effectdata:SetRadius(2)
+    util.Effect("Sparks", effectdata)
 end
 
 function ENT:Use( activator, caller )
@@ -174,7 +175,7 @@ function ENT:Use( activator, caller )
 end
 
 function ENT:OnRemove()
-	if self.sound then
-		self.sound:Stop()
-	end
+    if self.sound then
+        self.sound:Stop()
+    end
 end
