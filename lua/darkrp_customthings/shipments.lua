@@ -1005,7 +1005,7 @@ AddCustomShipment("Lockpick", {
     shipmodel = "models/items/item_item_crate.mdl",
     weight = 15,
     buttonColor = Color(88, 88, 88, 255),
-    label = "Keypad Cracker",
+    label = "Lockpick",
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
