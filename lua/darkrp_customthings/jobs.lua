@@ -335,7 +335,7 @@ TEAM_DRUG_DEALER = DarkRP.createJob("Drug Dealer", {
         command = "rebelleader",
         max = 1,
         salary = 55,
-        admin = 1,
+        admin = 0,
         vote = false,
         hasLicense = false,
         NeedToChangeFrom = TEAM_REBEL,
@@ -362,7 +362,7 @@ TEAM_DRUG_DEALER = DarkRP.createJob("Drug Dealer", {
         command = "rebel",
         max = 5,
         salary = 35,
-        admin = 1,
+        admin = 0,
         vote = false,
         hasLicense = false,
      })
