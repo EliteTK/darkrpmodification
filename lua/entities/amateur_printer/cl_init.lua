@@ -20,7 +20,9 @@ function ENT:Draw()
     attrib.health = self:GetNWInt("health", 0)
     attrib.coolant = self:GetNWInt("coolant", 0)
 
-    text.moneyStored = "£"..attrib.money
+    attrib.ents_found = self:GetNWInt("ents_found")
+
+    text.moneyStored = GAMEMODE.Config.currency..attrib.money
 
     surface.SetFont(font)
     text.name = DarkRP.getPhrase("money_printer")
@@ -44,6 +46,7 @@ function ENT:Draw()
 
     cam.Start3D2D(Pos - Ang:Up() * -17, Ang, 0.11)
         draw.WordBox(0, -125, -86.5, text.moneyStored, font, color.boxBg, color.text)
+        draw.WordBox(0, 0, -86.5, attrib.ents_found, font, color.boxBg, color.text)
         draw.RoundedBox(0, -130, -60, 260, 55, Color(100, 100, 100, 200))
         draw.RoundedBox(0, -125, -55, 250*math.max(attrib.coolant, 0)/100, 20, Color(0, 80, 170, 200))
         draw.RoundedBox(0, -125, -30, 250*math.max(attrib.health, 0)/100, 20, Color(255 - 255*attrib.health/100, 255*attrib.health/100, 0, 200))

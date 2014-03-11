@@ -48,6 +48,7 @@ function ENT:Initialize()
 
     timer.Simple(math.random(self.times.min.money, self.times.max.money), function() printMore(self) end)
     timer.Simple(math.random(self.times.min.coolant, self.times.max.coolant), function() useCoolant(self) end)
+
     coolantDamage(self)
 
     self.sound = CreateSound(self, Sound("ambient/levels/labs/equipment_printer_loop1.wav"))
@@ -55,14 +56,15 @@ function ENT:Initialize()
     self.sound:PlayEx(1, 100)
 end
 
+
 function ENT:OnTakeDamage(dmg)
     if self.burningup then return end
 
     self.damage = (self.damage or 100) - dmg:GetDamage()
     self:SetNWInt("health", self.damage)
     if self.damage <= 0 then
-        local rnd = math.random(1, 10)
-        if rnd < 3 then
+        local rnd = math.random(0, 4)
+        if rnd == 0 then
             self:BurstIntoFlames()
         else
             self:Destruct()
@@ -112,19 +114,27 @@ local function printMore(ent)
     timer.Simple(math.random(ent.times.min.money, ent.times.max.money), function() printMore(ent) end)
 end
 
-local function useCoolant(ent)
-    if(not IsValid(ent)) then return end
-    local needed_coolant = math.random(ent.rates.min.coolant, ent.rates.max.coolant)
-    local leaked_coolant = needed_coolant * ent.damage / 100
-    for _, v in pairs(ents.FindInSphere(ent:GetPos(), 1000000000)) do
-        Msg("Found entity at pos"..v:GetPos().."\n")
+function ENT:UseCoolant()
+    local needed_coolant = math.random(self.rates.min.coolant, self.rates.max.coolant)
+    local leaked_coolant = needed_coolant * self.damage / 100
+    local ents_found = 0
+
+    for _, v in pairs(ents.FindInSphere(self:GetPos(), 1000)) do
+        ents_found = ents_found + 1
         if(v.IsHeatExchanger) then
             needed_coolant = needed_coolant - v:Exchange(needed_coolant)
         end
     end
 
-    ent.coolant = ent.coolant - needed_coolant - leaked_coolant
-    ent:SetNWInt("coolant", ent.coolant)
+    self:SetNWInt("found_ents", ents_found)
+
+    self.coolant = self.coolant - needed_coolant - leaked_coolant
+    self:SetNWInt("coolant", self.coolant)
+end
+
+local function useCoolant(ent)
+    if(not IsValid(ent)) then return end
+    ent:UseCoolant()
     timer.Simple(math.random(ent.times.min.coolant, ent.times.max.coolant), function() useCoolant(ent) end)
 end
 
@@ -149,21 +159,11 @@ function ENT:CreateMoneybag()
 end
 
 function ENT:Think()
-
     if self:WaterLevel() > 0 then
         self:Destruct()
         self:Remove()
         return
     end
-
-    if not self.sparking then return end
-
-    local effectdata = EffectData()
-    effectdata:SetOrigin(self:GetPos())
-    effectdata:SetMagnitude(1)
-    effectdata:SetScale(1)
-    effectdata:SetRadius(2)
-    util.Effect("Sparks", effectdata)
 end
 
 function ENT:Use( activator, caller )
