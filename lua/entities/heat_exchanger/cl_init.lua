@@ -21,9 +21,11 @@ function ENT:Draw()
     local color = {}
     color.capacity = Color(50,50,50,200)
 
-    --Ang:RotateAroundAxis(Ang:Forward(), 90)
-    cam.Start3D2D(Pos, Ang, 0.11)
-        draw.WordBox(0, -400, 0, "This is a test. ---------", font, color.capacity, Color(255, 255, 255, 255))
+    Ang:RotateAroundAxis(Ang:Up(), -90)
+    Ang:RotateAroundAxis(Ang:Forward(), -90)
+    Ang:RotateAroundAxis(Ang:Up(), 180)
+    cam.Start3D2D(Pos + Ang:Up() * -9.2, Ang, 0.11)
+        draw.WordBox(0, 0, 0, "This is a test. ---------", font, color.capacity, Color(255, 255, 255, 255))
         draw.RoundedBox(0, 0, 0, 250*math.max(attrib.capacity, 0)/self.max_capacity, 20, color.capacity)
     cam.End3D2D()
 end

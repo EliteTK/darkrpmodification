@@ -4,4 +4,4 @@ ENT.PrintName = "Heat Exchanger"
 ENT.Author = "EliteTK"
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
-ENT.max_capacity = 5
+ENT.max_capacity = 6

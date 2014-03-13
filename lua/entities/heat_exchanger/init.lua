@@ -14,9 +14,8 @@ function ENT:Initialize()
     phys:Wake()
 
     self.damage = 100
-    self.max_capacity = 5
     self.capacity = self.max_capacity
-    self.recharge = 0.2
+    self.recharge = 0.45
 
     self:SetNWInt("capacity", self.capacity)
     self:SetNWInt("health", self.damage)
