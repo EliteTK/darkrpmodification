@@ -4,6 +4,9 @@ include("shared.lua")
 
 ENT.SeizeReward = 500
 
+local printMore
+local useCoolant
+local coolantDamage
 function ENT:Initialize()
     self:SetModel("models/props_c17/consolebox01a.mdl")
     self:PhysicsInit(SOLID_VPHYSICS)
@@ -17,12 +20,14 @@ function ENT:Initialize()
     self.coolant = 100
     self.moneyStored = 0
 
-    --Printer Specific Variables
-    --Name: amateur_printer
-    --Buy price: 1500
-    --Expected profit: 750
-    --Expected running time: 10 minutes
-    --Total money return: 2250
+    --[[
+    Printer Specific Variables
+    Name: amateur_printer
+    Buy price: 1500
+    Expected profit: 750
+    Expected running time: 10 minutes
+    Total money return: 2250
+    --]]
     self.times = { min = {}, max = {} }
 
     self.times.min.money = 4
@@ -107,45 +112,49 @@ function ENT:Fireball()
     self:Remove()
 end
 
-local function printMore(ent)
-    if(not IsValid(ent)) then return end
-    ent.moneyStored = ent.moneyStored + math.random(ent.rates.min.money, ent.rates.max.money)
-    ent:SetNWInt("money", ent.moneyStored)
-    timer.Simple(math.random(ent.times.min.money, ent.times.max.money), function() printMore(ent) end)
+function ENT:PrintMore()
+    self.moneyStored = self.moneyStored + math.random(self.rates.min.money, self.rates.max.money)
+    self:SetNWInt("money", self.moneyStored)
+    timer.Simple(math.random(self.times.min.money, self.times.max.money), function() printMore(self) end)
+end
+
+printMore = function(ent)
+    if not IsValid(ent) then return end
+    ent:PrintMore()
 end
 
 function ENT:UseCoolant()
     local needed_coolant = math.random(self.rates.min.coolant, self.rates.max.coolant)
-    local leaked_coolant = needed_coolant * self.damage / 100
-    local ents_found = 0
+    local leaked_coolant = needed_coolant * (100 - self.damage) / 100
 
-    for _, v in pairs(ents.FindInSphere(self:GetPos(), 1000)) do
-        ents_found = ents_found + 1
-        if(v.IsHeatExchanger) then
+    for _, v in pairs(ents.FindInSphere(self:GetPos(), 70)) do
+        if v.IsHeatExchanger then
             needed_coolant = needed_coolant - v:Exchange(needed_coolant)
         end
     end
 
-    self:SetNWInt("found_ents", ents_found)
-
     self.coolant = self.coolant - needed_coolant - leaked_coolant
     self:SetNWInt("coolant", self.coolant)
+    timer.Simple(math.random(self.times.min.coolant, self.times.max.coolant), function() useCoolant(self) end)
 end
 
-local function useCoolant(ent)
-    if(not IsValid(ent)) then return end
+useCoolant = function(ent)
+    if not IsValid(ent) then return end
     ent:UseCoolant()
-    timer.Simple(math.random(ent.times.min.coolant, ent.times.max.coolant), function() useCoolant(ent) end)
 end
 
-local function coolantDamage(ent)
-    if(not IsValid(ent)) then return end
-    if(ent.coolant <= 0) then
-        ent:TakeDamage(5, self, self)
-        DarkRP.notify(self:Getowning_ent(), 0, 4, DarkRP.getPhrase("money_printer_overheating"))
-        ent:SetNWInt("health", ent.damage)
+function ENT:CoolantDamage()
+    if(self.coolant <= 0) then
+        self:TakeDamage(5, self, self)
+        DarkRP.notify(self:Getowning_self(), 0, 4, DarkRP.getPhrase("money_printer_overheating"))
+        self:SetNWInt("health", self.damage)
     end
-    timer.Simple(1, function() coolantDamage(ent) end)
+    timer.Simple(1, function() coolantDamage(self) end)
+end
+
+coolantDamage = function(ent)
+    if(not IsValid(ent)) then return end
+    ent:CoolantDamage()
 end
 
 function ENT:CreateMoneybag()
@@ -167,7 +176,9 @@ function ENT:Think()
 end
 
 function ENT:Use( activator, caller )
-    if (activator:IsPlayer()) then
+    if (activator:IsPlayer()) and self.moneyStored ~= 0 then
+        local printValue = GAMEMODE.Config.currency..self.moneyStored
+        DarkRP.notify( activator, 0, 4, "Collected "..printValue.." from printer.")
         activator:addMoney(self.moneyStored)
         self.moneyStored = 0
         self:SetNWInt("money", self.moneyStored)

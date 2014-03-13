@@ -1,11 +1,11 @@
 ENT.Type = "anim"
 ENT.Base = "base_gmodentity"
-ENT.PrintName = "Money Printer"
-ENT.Author = "DarkRP Developers and <enter name here>"
+ENT.PrintName = "Amateur Printer"
+ENT.Author = "Base: DRP Devs, Reworked: EliteTK"
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
 
 function ENT:SetupDataTables()
-	self:NetworkVar("Int", 0, "price")
-	self:NetworkVar("Entity", 0, "owning_ent")
+    self:NetworkVar("Int", 0, "price")
+    self:NetworkVar("Entity", 0, "owning_ent")
 end

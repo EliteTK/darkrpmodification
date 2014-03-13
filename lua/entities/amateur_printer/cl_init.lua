@@ -4,17 +4,21 @@ function ENT:Initialize()
 end
 
 function ENT:Draw()
+    -- Draw the model.
     self:DrawModel()
 
+    -- Orientation defining variables
     local Pos = self:GetPos()
     local Ang = self:GetAngles()
 
+    -- Fonts
     local font = "HUDNumber5"
+    surface.SetFont(font)
 
+    -- Owner
     local owner = self:Getowning_ent()
-    local text = {}
-    text.owner = (IsValid(owner) and owner:Nick()) or DarkRP.getPhrase("unknown")
 
+    -- Displayed attributes
     local attrib = {}
     attrib.money = self:GetNWInt("money", 0)
     attrib.health = self:GetNWInt("health", 0)
@@ -22,29 +26,33 @@ function ENT:Draw()
 
     attrib.ents_found = self:GetNWInt("ents_found")
 
+    -- Displayed text
+    local text = {}
+    text.owner = (IsValid(owner) and owner:Nick()) or DarkRP.getPhrase("unknown")
     text.moneyStored = GAMEMODE.Config.currency..attrib.money
+    text.name = self.PrintName
 
-    surface.SetFont(font)
-    text.name = DarkRP.getPhrase("money_printer")
+    -- Displayed text width
     local textWidth = {}
     textWidth.text = surface.GetTextSize(text.name)
     textWidth.owner  = surface.GetTextSize(text.owner)
     textWidth.moneyStored = surface.GetTextSize(text.moneyStored)
 
-    Ang:RotateAroundAxis(Ang:Up(), 90)
-
+    -- Colours
     local color = {}
     color.boxBg = Color(0, 0, 0, 0)
     color.text = Color(255, 255, 255, 255)
 
+    -- Draw top printer text
+    Ang:RotateAroundAxis(Ang:Up(), 90)
     cam.Start3D2D(Pos + Ang:Up() * 11.5, Ang, 0.11)
         draw.WordBox(0, -textWidth.text*0.5, -40, text.name, font, color.boxBg, color.text)
         draw.WordBox(0, -textWidth.owner*0.5, 8, text.owner, font, color.boxBg, color.text)
     cam.End3D2D()
 
+    -- Draw front printer text
     Ang:RotateAroundAxis(Ang:Forward(), 90)
-
-    cam.Start3D2D(Pos - Ang:Up() * -17, Ang, 0.11)
+    cam.Start3D2D(Pos + Ang:Up() * 17, Ang, 0.11)
         draw.WordBox(0, -125, -86.5, text.moneyStored, font, color.boxBg, color.text)
         draw.WordBox(0, 0, -86.5, attrib.ents_found, font, color.boxBg, color.text)
         draw.RoundedBox(0, -130, -60, 260, 55, Color(100, 100, 100, 200))
