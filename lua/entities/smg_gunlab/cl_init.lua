@@ -10,7 +10,7 @@ function ENT:Draw()
     owner = (IsValid(owner) and owner:Nick()) or DarkRP.getPhrase("unknown")
 
     surface.SetFont("HUDNumber5")
-    local text = DarkRP.getPhrase("gun_lab")
+    local text = "SMG gun lab"
     local text2 = DarkRP.getPhrase("priceTag", DarkRP.formatMoney(self:Getprice()), "")
     local TextWidth = surface.GetTextSize(text)
     local TextWidth2 = surface.GetTextSize(text2)
