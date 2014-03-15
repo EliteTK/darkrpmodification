@@ -127,11 +127,32 @@ DarkRP.createEntity("Basic Heat Exchanger", {
 Gun Labs
 --]]
 
-DarkRP.createEntity("Pistol Gunlab", {
+DarkRP.createEntity("Pistol Gun lab", {
     ent = "pistol_gunlab",
     model = "models/props_c17/TrapPropeller_Engine.mdl",
     price = 5000,
     max = 1,
     cmd = "buypistollab",
-    buttonColor = Color(200, 150, 0, 255),
+    buttonColor = Color(255, 128, 0, 255),
+    allowed = {TEAM_GUN}
+})
+
+DarkRP.createEntity("SMG Gun lab", {
+    ent = "smg_gunlab",
+    model = "models/props_c17/TrapPropeller_Engine.mdl",
+    price = 8000,
+    max = 1,
+    cmd = "buysmglab",
+    buttonColor = Color(255, 128, 0, 255),
+    allowed = {TEAM_GUN}
+})
+
+DarkRP.createEntity("Assult rifle Gun lab", {
+    ent = "assult_gunlab",
+    model = "models/props_c17/TrapPropeller_Engine.mdl",
+    price = 11000,
+    max = 1,
+    cmd = "buyassultlab",
+    buttonColor = Color(255, 128, 0, 255),
+    allowed = {TEAM_GUN}
 })
