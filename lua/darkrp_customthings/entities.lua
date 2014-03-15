@@ -68,6 +68,10 @@ DarkRP.createEntity("Another test", {
     allowed = {TEAM_ADMIN}
 })
 
+--[[
+Printers
+--]]
+
 DarkRP.createEntity("Amateur Printer", {
     ent = "amateur_printer",
     model = "models/props_c17/consolebox01a.mdl",
@@ -104,11 +108,30 @@ DarkRP.createEntity("Nuclear Printer", {
     buttonColor = Color(50, 0, 120, 255),
 })
 
-DarkRP.createEntity("Heat Exchanger", {
-    ent = "heat_exchanger",
+--[[
+Heat Exchangers
+--]]
+
+DarkRP.createEntity("Basic Heat Exchanger", {
+    ent = "basic_heat_exchanger",
     model = "models/props/cs_assault/ACUnit02.mdl",
     price = 2500,
     max = 10,
-    cmd = "buyheatexchanger",
+    cmd = "buybasicheat",
     buttonColor = Color(0, 80, 170, 255),
+})
+
+-- TODO Advanced Heat Exchanger
+
+--[[
+Gun Labs
+--]]
+
+DarkRP.createEntity("Pistol Gunlab", {
+    ent = "pistol_gunlab",
+    model = "models/props_c17/TrapPropeller_Engine.mdl",
+    price = 5000,
+    max = 1,
+    cmd = "buypistollab",
+    buttonColor = Color(200, 150, 0, 255),
 })
