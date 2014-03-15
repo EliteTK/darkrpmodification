@@ -72,7 +72,7 @@ function ENT:Use(activator)
 
 
 	activator:addMoney(-cash)
-	DarkRP.notify(activator, 0, 3, "You purchased a P228 for " .. DarkRP.formatMoney(cash) .. "!")
+	DarkRP.notify(activator, 0, 3, "You purchased a M92 Beretta for " .. DarkRP.formatMoney(cash) .. "!")
 
 	if IsValid(owner) and activator ~= owner then
 		local gain = 0
