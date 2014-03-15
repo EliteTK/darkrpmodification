@@ -5,7 +5,7 @@ local hideHUDElements = {
 
     -- DarkRP_EntityDisplay is the text that is drawn above a player when you look at them.
     -- This also draws the information on doors and vehicles
-    ["DarkRP_EntityDisplay"] = false,
+    ["DarkRP_EntityDisplay"] = true,
 
     -- DarkRP_ZombieInfo draws information about zombies for admins who use /showzombie.
     ["DarkRP_ZombieInfo"] = false,
