@@ -146,13 +146,3 @@ DarkRP.createEntity("SMG Gun lab", {
     buttonColor = Color(255, 128, 0, 255),
     allowed = {TEAM_GUN}
 })
-
-DarkRP.createEntity("Assult rifle Gun lab", {
-    ent = "assult_gunlab",
-    model = "models/props_c17/TrapPropeller_Engine.mdl",
-    price = 11000,
-    max = 1,
-    cmd = "buyassultlab",
-    buttonColor = Color(255, 128, 0, 255),
-    allowed = {TEAM_GUN}
-})
