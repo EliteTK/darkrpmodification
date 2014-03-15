@@ -11,7 +11,7 @@ self:SetSolid(SOLID_VPHYSICS)
 self:SetUseType(SIMPLE_USE)
 local phys = self:GetPhysicsObject()
 
-self:Setprice(1000)
+self:Setprice(1750)
 phys:Wake()
 
 self.sparking = false
