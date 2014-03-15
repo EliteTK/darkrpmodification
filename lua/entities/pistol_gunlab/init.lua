@@ -11,7 +11,7 @@ function ENT:Initialize()
 	self:SetUseType(SIMPLE_USE)
 	local phys = self:GetPhysicsObject()
 
-	self:Setprice(200)
+	self:Setprice(500)
 	phys:Wake()
 
 	self.sparking = false
@@ -101,8 +101,8 @@ end
 function ENT:createGun()
 	self.Once = false
 	local gun = ents.Create("spawned_weapon")
-	gun:SetModel("models/weapons/w_pist_p228.mdl")
-	gun:SetWeaponClass("weapon_p2282")
+	gun:SetModel("models/weapons/w_beretta_m92.mdl")
+	gun:SetWeaponClass("m9k_m92beretta")
 	local gunPos = self:GetPos()
 	gun:SetPos(Vector(gunPos.x, gunPos.y, gunPos.z + 27))
 	gun.ShareGravgun = true
