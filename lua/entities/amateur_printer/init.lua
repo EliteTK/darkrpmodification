@@ -38,7 +38,7 @@ function ENT:Initialize()
 
     self.rates = { min = {}, max = {} }
 
-    self.rates.min.coolant = 1.333333
+    self.rates.min.coolant = 1
     self.rates.max.coolant = 2
 
     self.rates.min.money = 17
@@ -146,14 +146,14 @@ end
 function ENT:CoolantDamage()
     if(self.coolant <= 0) then
         self:TakeDamage(5, self, self)
-        DarkRP.notify(self:Getowning_self(), 0, 4, DarkRP.getPhrase("money_printer_overheating"))
+        DarkRP.notify(self:Getowning_ent(), 0, 4, DarkRP.getPhrase("money_printer_overheating"))
         self:SetNWInt("health", self.damage)
     end
     timer.Simple(1, function() coolantDamage(self) end)
 end
 
 coolantDamage = function(ent)
-    if(not IsValid(ent)) then return end
+    if not IsValid(ent) then return end
     ent:CoolantDamage()
 end
 

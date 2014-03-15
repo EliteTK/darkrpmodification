@@ -6,6 +6,13 @@ local refill
 function ENT:Initialize()
     self:SetModel("models/props/cs_assault/ACUnit02.mdl")
 
+    local Ang = self:GetAngles()
+    Ang:RotateAroundAxis(Ang:Right(), 90)
+    self:SetAngles(Ang)
+
+    local Pos = self:GetPos()
+    self:SetPos(Pos + Ang:Up() * 9.4)
+
     self:PhysicsInit(SOLID_VPHYSICS)
     self:SetMoveType(MOVETYPE_VPHYSICS)
     self:SetSolid(SOLID_VPHYSICS)
@@ -43,6 +50,7 @@ end
 function ENT:Exchange(needed_coolant)
     local returned_coolant = math.min(needed_coolant, self.capacity)
     self.capacity = self.capacity - returned_coolant
+    self:SetNWInt("capacity", self.capacity)
     return returned_coolant
 end
 
