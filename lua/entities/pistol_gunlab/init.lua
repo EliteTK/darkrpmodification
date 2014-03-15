@@ -11,7 +11,7 @@ function ENT:Initialize()
 	self:SetUseType(SIMPLE_USE)
 	local phys = self:GetPhysicsObject()
 
-	self:Setprice(500)
+	self:Setprice(700)
 	phys:Wake()
 
 	self.sparking = false
