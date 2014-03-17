@@ -308,6 +308,7 @@ GM.Config.DefaultWeapons = {
 	"gmod_tool",
 	"pocket",
 	"weapon_physgun"
+	"weapon_fists"
 }
 
 -- The list of weapons admins spawn with, in addition to the normal weapons
