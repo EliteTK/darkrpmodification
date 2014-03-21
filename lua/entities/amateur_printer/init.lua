@@ -16,43 +16,50 @@ function ENT:Initialize()
     phys:Wake()
 
     self.sparking = false
-    self.damage = 100
+    self.cmax_damage = self.max_damage
+    self.damage = self.max_damage
     self.coolant = 100
     self.moneyStored = 0
 
     --[[
-    Printer Specific Variables
+    PRINTER SPECIFIC CONSTANTS
+    --]]
+
+    self.PSV = {}
+    self.PSV.runtime = 600
+    self.PSV.payout = 2250
+
+    --[[
     Name: amateur_printer
     Buy price: 1500
     Expected profit: 750
     Expected running time: 10 minutes
     Total money return: 2250
     --]]
-    self.times = { min = {}, max = {} }
+    self.times = {}
 
-    self.times.min.money = 4
-    self.times.max.money = 6
+    self.times.money = 5
 
-    self.times.min.coolant = 9
-    self.times.max.coolant = 11
+    self.times.coolant = 10
 
     self.rates = { min = {}, max = {} }
 
-    self.rates.min.coolant = 1
-    self.rates.max.coolant = 2
+    self.rates.min.coolant = math.floor(self.max_coolant / (self.PSV.runtime / self.times.coolant))
+    self.rates.max.coolant = self.rates.min.coolant + 1
 
-    self.rates.min.money = 17
-    self.rates.max.money = 20
+    self.rates.min.money = math.floor(self.PSV.payout / (self.PSV.runtime / self.times.money)) - 1
+    self.rates.max.money = self.rates.min.money + 3
     --END
 
     self:SetNWInt("coolant", self.coolant)
+    self:SetNWInt("cmaxhealth", self.cmax_damage)
     self:SetNWInt("health", self.damage)
     self:SetNWInt("money", self.moneyStored)
 
     self.IsMoneyPrinter = true
 
-    timer.Simple(math.random(self.times.min.money, self.times.max.money), function() printMore(self) end)
-    timer.Simple(math.random(self.times.min.coolant, self.times.max.coolant), function() useCoolant(self) end)
+    timer.Simple(self.times.money, function() printMore(self) end)
+    timer.Simple(self.times.coolant, function() useCoolant(self) end)
 
     coolantDamage(self)
 
@@ -65,8 +72,11 @@ end
 function ENT:OnTakeDamage(dmg)
     if self.burningup then return end
 
-    self.damage = (self.damage or 100) - dmg:GetDamage()
+    self.damage = (self.damage or self.max_damage) - dmg:GetDamage()
+    self.cmax_damage = (self.cmax_damage or self.max_damage) - dmg:GetDamage() * 0.3
     self:SetNWInt("health", self.damage)
+    self:SetNWInt("cmaxhealth", self.cmax_damage)
+
     if self.damage <= 0 then
         local rnd = math.random(0, 4)
         if rnd == 0 then
@@ -115,7 +125,7 @@ end
 function ENT:PrintMore()
     self.moneyStored = self.moneyStored + math.random(self.rates.min.money, self.rates.max.money)
     self:SetNWInt("money", self.moneyStored)
-    timer.Simple(math.random(self.times.min.money, self.times.max.money), function() printMore(self) end)
+    timer.Simple(self.times.money, function() printMore(self) end)
 end
 
 printMore = function(ent)
@@ -135,7 +145,7 @@ function ENT:UseCoolant()
 
     self.coolant = self.coolant - needed_coolant - leaked_coolant
     self:SetNWInt("coolant", self.coolant)
-    timer.Simple(math.random(self.times.min.coolant, self.times.max.coolant), function() useCoolant(self) end)
+    timer.Simple(self.times.coolant, function() useCoolant(self) end)
 end
 
 useCoolant = function(ent)
@@ -175,10 +185,10 @@ function ENT:Think()
     end
 end
 
-function ENT:Use( activator, caller )
+function ENT:Use(activator, caller)
     if (activator:IsPlayer()) and self.moneyStored ~= 0 then
         local printValue = GAMEMODE.Config.currency..self.moneyStored
-        DarkRP.notify( activator, 0, 4, "Collected "..printValue.." from printer.")
+        DarkRP.notify(activator, 0, 4, "Collected "..printValue.." from printer.")
         activator:addMoney(self.moneyStored)
         self.moneyStored = 0
         self:SetNWInt("money", self.moneyStored)

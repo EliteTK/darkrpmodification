@@ -4,6 +4,8 @@ ENT.PrintName = "Amateur Printer"
 ENT.Author = "Base: DRP Devs, Reworked: EliteTK"
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
+ENT.max_damage = 100
+ENT.max_coolant = 100
 
 function ENT:SetupDataTables()
     self:NetworkVar("Int", 0, "price")
