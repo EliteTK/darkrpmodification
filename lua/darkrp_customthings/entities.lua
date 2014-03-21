@@ -1,22 +1,12 @@
 --[[
------------------------------------------------------------------------------
-/*---------------------------------------------------------------------------
 DarkRP custom entities
----------------------------------------------------------------------------
-
-This file contains your custom entities.
-This file should also contain entities from DarkRP that you edited.
-
-Note: If you want to edit a default DarkRP entity, first disable it in darkrp_config/disabled_defaults.lua
-	Once you've done that, copy and paste the entity to this file and edit it.
-
-The default entities can be found here:
-https://github.com/FPtje/DarkRP/blob/master/gamemode/config/addentities.lua#L111
-
-Add entities under the following line:
----------------------------------------------------------------------------*/
 --]]
---
+
+--[[
+Kits
+--]]
+
+-- Health
 
 DarkRP.createEntity("Health vial", {
     ent = "spawned_health_vial",
@@ -38,6 +28,8 @@ DarkRP.createEntity("Health kit", {
     allowed = {TEAM_MEDIC}
 })
 
+-- Armor
+
 DarkRP.createEntity("Armor", {
     ent = "spawned_armor",
     model = "models/Items/battery.mdl",
@@ -46,26 +38,6 @@ DarkRP.createEntity("Armor", {
     cmd = "buyarmor",
     buttonColor = Color(80, 80, 255, 255), 
     allowed = {TEAM_BLACK_MARKET_DEALER, TEAM_SWAT_LEADER}
-})
-
-DarkRP.createEntity("Test", {
-    ent = "test_entity",
-    model = "models/props_interiors/BathTub01a.mdl",
-    price = 0,
-    max = 1,
-    cmd = "buybath",
-    buttonColor = Color(12, 80, 255, 255), 
-    allowed = {TEAM_ADMIN}
-})
-
-DarkRP.createEntity("Another test", {
-    ent = "test_playerpos_entity",
-    model = "models/props_lab/citizenradio.mdl",
-    price = 0,
-    max = 100,
-    cmd = "buybath",
-    buttonColor = Color(123, 32, 45, 255),
-    allowed = {TEAM_ADMIN}
 })
 
 --[[
@@ -122,6 +94,34 @@ DarkRP.createEntity("Basic Heat Exchanger", {
 })
 
 -- TODO Advanced Heat Exchanger
+
+--[[
+Printer kits
+--]]
+
+-- Repair
+
+DarkRP.createEntity("Printer Repair Kit", {
+    ent = "repair_kit",
+    model = "",
+    price = 200,
+    max = 20,
+    cmd = "buyrepair",
+    buttonColor = Color(90, 90, 90, 255),
+    allowed = {TEAM_TECHNICIAN}
+})
+
+-- Coolant
+
+DarkRP.createEntity("Printer Coolant Bottle", {
+    ent = "coolant_bottle",
+    model = "",
+    price = 200,
+    max = 20,
+    cmd = "buycoolant",
+    buttonColor = Color(0, 80, 170, 255),
+    allowed = {TEAM_TECHNICIAN}
+})
 
 --[[
 Gun Labs

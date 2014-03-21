@@ -307,7 +307,7 @@ GM.Config.DefaultWeapons = {
 	"weapon_physcannon",
 	"gmod_tool",
 	"pocket",
-	"weapon_physgun"
+	"weapon_physgun",
 	"weapon_fists"
 }
 

@@ -44,7 +44,7 @@ function ENT:Draw()
     color.text = Color(255, 255, 255, 255)
     color.coolant = Color(0, 80, 170, 255)
     color.mcoolant = Color(0, 40, 85, 255)
-    color.mhealth = Color(0, 60, 0, 255)
+    color.mhealth = Color(0, 20, 0, 255)
 
     -- Draw top of printer
     Ang:RotateAroundAxis(Ang:Up(), 90)
