@@ -19,7 +19,7 @@ function ENT:Initialize()
 end
 
 function ENT:Touch(ent)
-    if(IsValid(ent) and ent.IsMoneyPrinter) then
+    if(IsValid(ent) and (ent.IsMoneyPrinter or ent.IsHeatExchanger)) then
         ent.damage = math.min(ent.cmax_damage, ent.damage + 10)
         ent:SetNWInt("health", ent.damage)
         self:Remove()
