@@ -3,7 +3,7 @@ AddCSLuaFile("shared.lua")
 include("shared.lua")
 
 function ENT:Initialize()
-    self:SetModel("")
+    self:SetModel("models/props_lab/reciever01d.mdl")
 
     local Ang = self:GetAngles()
 
@@ -18,9 +18,10 @@ function ENT:Initialize()
     self.RepairKit = true
 end
 
-function ENT:Touch(hitEnt)
-    if(IsValid(hitEnt) and hitEnt.IsMoneyPrinter) then
-        hitEnt.damage = math.min(hitEnt.cmax_damage, hitEnt.damage + 30)
+function ENT:Touch(ent)
+    if(IsValid(ent) and ent.IsMoneyPrinter) then
+        ent.damage = math.min(ent.cmax_damage, ent.damage + 10)
+        ent:SetNWInt("health", ent.damage)
         self:Remove()
     end
 end

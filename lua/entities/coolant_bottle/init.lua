@@ -3,7 +3,7 @@ AddCSLuaFile("shared.lua")
 include("shared.lua")
 
 function ENT:Initialize()
-    self:SetModel("")
+    self:SetModel("models/props_junk/garbage_milkcarton001a.mdl")
 
     local Ang = self:GetAngles()
 
@@ -18,9 +18,10 @@ function ENT:Initialize()
     self.CoolantBottle = true
 end
 
-function ENT:Touch(hitEnt)
-    if(IsValid(hitEnt) and hitEnt.IsMoneyPrinter) then
-        hitEnt.coolant = math.min(hitEnt.max_coolant, hitEnt.coolant + 20)
+function ENT:Touch(ent)
+    if(IsValid(ent) and ent.IsMoneyPrinter) then
+        ent.coolant = math.min(ent.max_coolant, ent.coolant + 20)
+        ent:SetNWInt("coolant", ent.coolant)
         self:Remove()
     end
 end

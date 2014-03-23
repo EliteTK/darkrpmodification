@@ -1,21 +1,19 @@
---[[
-/*---------------------------------------------------------------------------
-/*---------------------------------------------------------------------------
-DarkRP config settings
----------------------------------------------------------------------------
+--/*---------------------------------------------------------------------------
+--/*---------------------------------------------------------------------------
+--DarkRP config settings
+-----------------------------------------------------------------------------
 
-This is the settings file of DarkRP. Every DarkRP setting is listed here.
+--This is the settings file of DarkRP. Every DarkRP setting is listed here.
 
-Warning:
-If this file is missing settings (because of e.g. an update), DarkRP will assume default values for these settings.
-You need not worry about updating this file. If a new setting is added you can manually add them to this file.
----------------------------------------------------------------------------*/
---]]
+--Warning:
+--If this file is missing settings (because of e.g. an update), DarkRP will assume default values for these settings.
+--You need not worry about updating this file. If a new setting is added you can manually add them to this file.
+-----------------------------------------------------------------------------*/
 
-/*
-Toggle settings
-Set to true or false
-*/
+--/*
+--Toggle settings
+--Set to true or false
+--*/
 
 -- voice3D - Enable/disable 3DVoice is enabled
 GM.Config.voice3D						= true
@@ -158,9 +156,9 @@ GM.Config.weaponCheckerHideDefault		= true
 -- weaponCheckerHideNoLicense - Hide weapons that do not require a license
 GM.Config.weaponCheckerHideNoLicense	= false
 
-/*
-Value settings
-*/
+--/*
+--Value settings
+--*/
 -- adminweapons - Who can spawn weapons: 0: admins only, 1: supadmins only, 2: no one
 GM.Config.adminweapons					= 1
 -- arrestspeed - Sets the max arrest speed.
@@ -254,9 +252,9 @@ GM.Config.falldamageamount				= 10
 -- printeroverheatchance - The likelyhood of a printer overheating. The higher this number, the less likely. Minimum 3. Default 22
 GM.Config.printeroverheatchance			= 0
 
-/*---------------------------------------------------------------------------
-Other settings
----------------------------------------------------------------------------*/
+--/*---------------------------------------------------------------------------
+--Other settings
+-----------------------------------------------------------------------------*/
 
 -- The classname of money packets. Use this to create your own money entity!
 -- Note: the money packet must support the "Setamount" method (or the amount DTVar)
@@ -364,9 +362,9 @@ GM.Config.allowedProperties = {
 	bodygroups = true,
 }
 
-/*---------------------------------------------------------------------------
-F4 menu
----------------------------------------------------------------------------*/
+--/*---------------------------------------------------------------------------
+--F4 menu
+-----------------------------------------------------------------------------*/
 -- hide the items that you can't buy and the jobs you can't get (instead of graying them out)
 -- this option hides items when you don't have enough money, when the maximum is reached for a job or any other reason
 GM.Config.hideNonBuyable = false
@@ -376,14 +374,14 @@ GM.Config.hideNonBuyable = false
 -- but you won't see gundealer shipments when you have the citizen job
 GM.Config.hideTeamUnbuyable = true
 
-/*---------------------------------------------------------------------------
-AFK module
----------------------------------------------------------------------------*/
+--/*---------------------------------------------------------------------------
+--AFK module
+-----------------------------------------------------------------------------*/
 GM.Config.afkdemotetime = 600
 
-/*---------------------------------------------------------------------------
-Hitmenu module
----------------------------------------------------------------------------*/
+--/*---------------------------------------------------------------------------
+--Hitmenu module
+-----------------------------------------------------------------------------*/
 -- The minimum price for a hit
 GM.Config.minHitPrice = 1500
 -- The minimum distance between a hitman and his customer when they make the deal
@@ -397,9 +395,9 @@ GM.Config.hitTargetCooldown = 300
 -- How long a customer has to wait to be able to buy another hit (from the moment the hit is accepted)
 GM.Config.hitCustomerCooldown = 180
 
-/*---------------------------------------------------------------------------
-Hungermod module
----------------------------------------------------------------------------*/
+--/*---------------------------------------------------------------------------
+--Hungermod module
+-----------------------------------------------------------------------------*/
 -- hungerspeed <Amount> - Set the rate at which players will become hungry (2 is the default)
 GM.Config.hungerspeed = 2
 -- starverate <Amount> - How much health that is taken away every second the player is starving  (3 is the default)
