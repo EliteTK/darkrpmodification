@@ -90,10 +90,17 @@ DarkRP.createEntity("Basic Heat Exchanger", {
     price = 2500,
     max = 10,
     cmd = "buybasicheat",
-    buttonColor = Color(0, 80, 170, 255),
+    buttonColor = Color(90, 50, 30, 255),
 })
 
--- TODO Advanced Heat Exchanger
+DarkRP.createEntity("Advanced Heat Exchanger", {
+    ent = "advanced_heat_exchanger",
+    model = "models/props/cs_assault/ACUnit02.mdl",
+    price = 7000,
+    max = 10,
+    cmd = "buyadvancedheat",
+    buttonColor = Color(182, 182, 182, 255),
+})
 
 --[[
 Printer kits

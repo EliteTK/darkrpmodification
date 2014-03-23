@@ -45,15 +45,15 @@ function ENT:Draw()
     Ang:RotateAroundAxis(Ang:Up(), 180)
     cam.Start3D2D(Pos + Ang:Up() * 9.2, Ang, 0.11)
         -- Name and owner
-        draw.WordBox(0, -textWidth.name/2, -36.5, text.name, font, color.boxBg, color.text)
-        draw.WordBox(0, -textWidth.owner/2, -10, text.owner, font, color.boxBg, color.text)
+        draw.WordBox(0, -textWidth.name/2, -56.5, text.name, font, color.boxBg, color.text)
+        draw.WordBox(0, -textWidth.owner/2, -30, text.owner, font, color.boxBg, color.text)
 
         -- Background
-        draw.RoundedBox(0, -130, 16.5, 260, 30, color.background)
+        draw.RoundedBox(0, -130, -3.5, 260, 30, color.background)
 
         -- Health maxbar and bar
-        draw.RoundedBox(0, -125, 21.5, 250*math.max(attrib.mhealth, 0)/self.max_damage, 20, color.mhealth)
-        draw.RoundedBox(0, -125, 21.5, 250*math.max(attrib.health, 0)/self.max_damage, 20, Color(255 - 255*attrib.health/100, 255*attrib.health/100, 0, 255))
+        draw.RoundedBox(0, -125, 1.5, 250*math.max(attrib.mhealth, 0)/self.max_damage, 20, color.mhealth)
+        draw.RoundedBox(0, -125, 1.5, 250*math.max(attrib.health, 0)/self.max_damage, 20, Color(255 - 255*attrib.health/100, 255*attrib.health/100, 0, 255))
     cam.End3D2D()
 end
 

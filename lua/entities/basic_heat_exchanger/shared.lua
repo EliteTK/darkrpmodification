@@ -6,7 +6,7 @@ ENT.Spawnable = false
 ENT.AdminSpawnable = false
 ENT.max_capacity = 6
 ENT.max_damage = 100
-ENT.lifetime = 300
+ENT.lifetime = 400
 
 function ENT:SetupDataTables()
     self:NetworkVar("Int", 0, "price")

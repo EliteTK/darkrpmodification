@@ -9,6 +9,8 @@ local useCoolant
 local coolantDamage
 function ENT:Initialize()
     self:SetModel("models/props_c17/consolebox01a.mdl")
+    self:SetColor(Color(109, 109, 109, 255))
+
     self:PhysicsInit(SOLID_VPHYSICS)
     self:SetMoveType(MOVETYPE_VPHYSICS)
     self:SetSolid(SOLID_VPHYSICS)
@@ -25,16 +27,12 @@ function ENT:Initialize()
     PRINTER SPECIFIC CONSTANTS
     --]]
 
-    self.PSV = {}
-    self.PSV.runtime = 600
-    self.PSV.payout = 3000
-
     --[[
     Name: amateur_printer
     Buy price: 1500
-    Expected profit: 1500
+    Expected profit: 750
     Expected running time: 10 minutes
-    Total money return: 3000
+    Total money return: 2250
     --]]
     self.times = {}
 
@@ -44,10 +42,12 @@ function ENT:Initialize()
 
     self.rates = { min = {}, max = {} }
 
-    self.rates.min.coolant = math.floor(self.max_coolant / (self.PSV.runtime / self.times.coolant))
+    self.last_coolant = max_coolant
+
+    self.rates.min.coolant = math.floor(self.max_coolant / (self.lifetime / self.times.coolant))
     self.rates.max.coolant = self.rates.min.coolant + 1
 
-    self.rates.min.money = math.floor(self.PSV.payout / (self.PSV.runtime / self.times.money)) - 1
+    self.rates.min.money = math.floor(self.gain / (self.lifetime / self.times.money)) - 1
     self.rates.max.money = self.rates.min.money + 3
     --END
 
@@ -135,7 +135,7 @@ end
 
 function ENT:UseCoolant()
     local needed_coolant = math.random(self.rates.min.coolant, self.rates.max.coolant)
-    local leaked_coolant = needed_coolant * (100 - self.damage) / 100
+    local leaked_coolant = needed_coolant * (self.cmax_damage - self.damage) / self.cmax_damage
 
     for _, v in pairs(ents.FindInSphere(self:GetPos(), 70)) do
         if v.IsHeatExchanger then
@@ -156,9 +156,12 @@ end
 function ENT:CoolantDamage()
     if(self.coolant <= 0) then
         self:TakeDamage(5, self, self)
-        DarkRP.notify(self:Getowning_ent(), 0, 4, DarkRP.getPhrase("money_printer_overheating"))
+        if(self.last_coolant ~= self.coolant) then
+            DarkRP.notify(self:Getowning_ent(), 0, 4, DarkRP.getPhrase("money_printer_overheating"))
+        end
         self:SetNWInt("health", self.damage)
     end
+    self.last_coolant = self.coolant
     timer.Simple(1, function() coolantDamage(self) end)
 end
 

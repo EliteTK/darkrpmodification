@@ -65,7 +65,7 @@ function ENT:Draw()
         draw.RoundedBox(0, -125, -55, 250*math.max(attrib.coolant, 0)/self.max_coolant, 20, color.coolant)
         -- Health maxbar and bar
         draw.RoundedBox(0, -125, -30, 250*math.max(attrib.mhealth, 0)/self.max_damage, 20, color.mhealth)
-        draw.RoundedBox(0, -125, -30, 250*math.max(attrib.health, 0)/self.max_damage, 20, Color(255 - 255*attrib.health/100, 255*attrib.health/100, 0, 200))
+        draw.RoundedBox(0, -125, -30, 250*math.max(attrib.health, 0)/self.max_damage, 20, Color(255 - 255*attrib.health/100, 255*attrib.health/100, 0, 255))
     cam.End3D2D()
 end
 

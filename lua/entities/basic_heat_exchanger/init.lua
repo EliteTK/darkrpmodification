@@ -6,6 +6,7 @@ local refill
 local wear
 function ENT:Initialize()
     self:SetModel("models/props/cs_assault/ACUnit02.mdl")
+    self:SetColor(Color(90, 50, 30, 255))
 
     local Ang = self:GetAngles()
     Ang:RotateAroundAxis(Ang:Right(), 90)

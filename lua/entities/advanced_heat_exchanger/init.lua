@@ -3,8 +3,10 @@ AddCSLuaFile("shared.lua")
 include("shared.lua")
 
 local refill
+local wear
 function ENT:Initialize()
     self:SetModel("models/props/cs_assault/ACUnit02.mdl")
+    self:SetColor(Color(128, 128, 128, 255))
 
     local Ang = self:GetAngles()
     Ang:RotateAroundAxis(Ang:Right(), 90)
@@ -20,7 +22,8 @@ function ENT:Initialize()
     phys:SetMass( 100 )
     phys:Wake()
 
-    self.damage = 100
+    self.damage = self.max_damage
+    self.cmax_damage = self.max_damage
     self.capacity = self.max_capacity
     self.recharge = 0.45
 
@@ -30,9 +33,10 @@ function ENT:Initialize()
     self.IsHeatExchanger = true
 
     timer.Simple(1, function() refill(self) end)
+    timer.Simple(1, function() wear(self) end)
 
     self.sound = CreateSound(self, Sound("ambient/engine_idle.wav"))
-    self.sound:SetSoundLevel(65)
+    self.sound:SetSoundLevel(45)
     self.sound:PlayEx(1, 100)
 end
 
@@ -47,6 +51,17 @@ refill = function(ent)
     ent:Refill()
 end
 
+
+function ENT:Wear()
+    self:TakeDamage(self.max_damage / self.lifetime, self, self)
+    timer.Simple(1, function() wear(self) end)
+end
+
+wear = function(ent)
+    if not IsValid(ent) then return end
+    ent:Wear()
+end
+
 function ENT:Exchange(needed_coolant)
     local returned_coolant = math.min(needed_coolant, self.capacity)
     self.capacity = self.capacity - returned_coolant
@@ -55,8 +70,11 @@ function ENT:Exchange(needed_coolant)
 end
 
 function ENT:OnTakeDamage(dmg)
-    self.damage = (self.damage or 100) - dmg:GetDamage()
+    self.damage = (self.damage or self.max_damage) - dmg:GetDamage()
+    self.cmax_damage = (self.cmax_damage or self.max_damage) - dmg:GetDamage() * 0.3
     self:SetNWInt("health", self.damage)
+    self:SetNWInt("cmaxhealth", self.cmax_damage)
+
     if self.damage <= 0 then
         self:Destruct()
         self:Remove()

@@ -9,6 +9,8 @@ local useCoolant
 local coolantDamage
 function ENT:Initialize()
     self:SetModel("models/props_c17/consolebox01a.mdl")
+    self:SetColor(Color(90, 50, 30, 255))
+
     self:PhysicsInit(SOLID_VPHYSICS)
     self:SetMoveType(MOVETYPE_VPHYSICS)
     self:SetSolid(SOLID_VPHYSICS)

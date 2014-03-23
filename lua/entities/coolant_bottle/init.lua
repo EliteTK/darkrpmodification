@@ -20,9 +20,9 @@ end
 
 function ENT:Touch(ent)
     if(IsValid(ent) and ent.IsMoneyPrinter) then
-        ent.coolant = math.min(ent.max_coolant, ent.coolant + 20)
-        ent:SetNWInt("coolant", ent.coolant)
         self:Remove()
+        ent.coolant = math.min(ent.max_coolant, ent.coolant + 10)
+        ent:SetNWInt("coolant", ent.coolant)
     end
 end
 
