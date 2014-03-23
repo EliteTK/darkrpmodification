@@ -93,3 +93,27 @@ DarkRP.createVehicle({
         allowed = {TEAM_CAR_DEALER},
         label = "Impala 88",
 })
+
+DarkRP.createVehicle({
+        name = "Cadillac",
+        model = "models/splayn/cadillac.mdl",
+        price = 4000,
+        allowed = {TEAM_CAR_DEALER},
+        label = "Cadillac",
+})
+
+DarkRP.createVehicle({
+        name = "LamboDiablo",
+        model = "models/tiggomods/vehicles/lambodiablo.mdl",
+        price = 4200,
+        allowed = {TEAM_CAR_DEALER},
+        label = "Lamborghini Diablo",
+})
+
+DarkRP.createVehicle({
+        name = "FerrariF50",
+        model = "models/tiggomods/vehicles/ferrarif50.mdl",
+        price = 4500,
+        allowed = {TEAM_CAR_DEALER},
+        label = "Ferrari F50",
+})
