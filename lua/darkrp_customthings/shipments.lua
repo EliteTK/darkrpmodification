@@ -1090,6 +1090,121 @@ AddCustomShipment("Armour kits", {
     getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
 
+AddCustomShipment("Damascus sword", {
+    model = "models/weapons/w_damascus_sword.mdl", 
+    entity = "m9k_damascus",
+    price = 5000,
+    amount = 5,
+    separate = false, 
+    pricesep = 2000, 
+    noship = false, 
+    allowed = {TEAM_BLACK_MARKET_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15, 
+    buttonColor = Color(0, 110, 255, 255), 
+    label = "Damascus Sword",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Frag Grenade", {
+    model = "models/weapons/w_m61_fraggynade.mdl", 
+    entity = "m9k_m61_frag",
+    price = 17500,
+    amount = 5,
+    separate = false, 
+    pricesep = 2000, 
+    noship = false, 
+    allowed = {TEAM_BLACK_MARKET_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15, 
+    buttonColor = Color(44, 44, 44, 255), 
+    label = "Frag grenade",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Sticky grenade", {
+    model = "models/weapons/w_sticky_grenade_thrown.mdl", 
+    entity = "m9k_sticky_grenade",
+    price = 20000,
+    amount = 5,
+    separate = false, 
+    pricesep = 2000, 
+    noship = false, 
+    allowed = {TEAM_BLACK_MARKET_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15, 
+    buttonColor = Color(0, 20, 110, 255), 
+    label = "Sticky grenade",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("C4", {
+    model = "models/weapons/w_sb_planted.mdl", 
+    entity = "m9k_suicide_bomb",
+    price = 90000,
+    amount = 2,
+    separate = true, 
+    pricesep = 50000, 
+    noship = false, 
+    allowed = {TEAM_BLACK_MARKET_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15, 
+    buttonColor = Color(255, 255, 160, 255), 
+    label = "C4",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("Proximity Mines", {
+    model = "models/weapons/w_px.mdl", 
+    entity = "m9k_proxy_mine",
+    price = 110000,
+    amount = 2,
+    separate = true, 
+    pricesep = 60000, 
+    noship = false, 
+    allowed = {TEAM_BLACK_MARKET_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15, 
+    buttonColor = Color(44, 44, 44, 255), 
+    label = "Proximity mines",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+AddCustomShipment("IED", {
+    model = "models/weapons/w_camphon2.mdl", 
+    entity = "m9k_ied_detonator",
+    price = 30000,
+    amount = 5,
+    separate = true, 
+    pricesep = 8000, 
+    noship = false, 
+    allowed = {TEAM_BLACK_MARKET_DEALER},
+    shipmodel = "models/items/item_item_crate.mdl",
+    weight = 15, 
+    buttonColor = Color(44, 44, 44, 255), 
+    label = "IED",
+    
+    shipmentClass = "spawned_shipment",
+    onBought = function(ply, shipment, ent) end,
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
+})
+
+models/weapons/w_camphon2.mdl
 --[[
 -- *******************
 -- DRUG DEALER
