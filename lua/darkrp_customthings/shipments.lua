@@ -1203,8 +1203,6 @@ AddCustomShipment("IED", {
     onBought = function(ply, shipment, ent) end,
     getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
-
-models/weapons/w_camphon2.mdl
 --[[
 -- *******************
 -- DRUG DEALER
