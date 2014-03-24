@@ -1,6 +1,6 @@
 ENT.Type = "anim"
 ENT.Base = "base_gmodentity"
-ENT.PrintName = "Amateur Printer"
+ENT.PrintName = "Nuclear Printer"
 ENT.Author = "Base: DRP Devs, Reworked: EliteTK"
 ENT.Spawnable = false
 ENT.AdminSpawnable = false

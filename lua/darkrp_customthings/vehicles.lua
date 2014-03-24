@@ -1,17 +1,19 @@
-/*---------------------------------------------------------------------------
-/*---------------------------------------------------------------------------
-DarkRP custom vehicles
----------------------------------------------------------------------------
+--/*---------------------------------------------------------------------------
+--/*---------------------------------------------------------------------------
+--DarkRP custom vehicles
+-----------------------------------------------------------------------------
 
-This file contains your custom vehicles.
-This file should also contain vehicles from DarkRP that you edited.
+--This file contains your custom vehicles.
+--This file should also contain vehicles from DarkRP that you edited.
 
-For examples and explanation please visit this wiki page:
-http://wiki.darkrp.com/index.php/DarkRP:Vehicles
+--For examples and explanation please visit this wiki page:
+--http://wiki.darkrp.com/index.php/DarkRP:Vehicles
 
 
-Add vehicles under the following line:
----------------------------------------------------------------------------*/
+--Add vehicles under the following line:
+-----------------------------------------------------------------------------*/
+
+-- Car dealer cars.
 DarkRP.createVehicle({
         name = "Abrams",
         model = "models/tiggomods/tanks/m1a1/body.mdl",
@@ -27,15 +29,6 @@ DarkRP.createVehicle({
         price = 2500,
         allowed = {TEAM_CAR_DEALER},
         label = "Yamahay FZ350",
-})
-
-
-DarkRP.createVehicle({
-        name = "Taxi",
-        model = "models/taxi1.mdl",
-        price = 500,
-        allowed = {TEAM_TAXI},
-        label = "Taxi",
 })
 
 DarkRP.createVehicle({
@@ -116,4 +109,13 @@ DarkRP.createVehicle({
         price = 4500,
         allowed = {TEAM_CAR_DEALER},
         label = "Ferrari F50",
+})
+
+-- Taxi driver vehicles.
+DarkRP.createVehicle({
+        name = "Taxi",
+        model = "models/taxi1.mdl",
+        price = 500,
+        allowed = {TEAM_TAXI},
+        label = "Taxi",
 })

@@ -317,9 +317,6 @@ GM.Config.AdminWeapons = {
 
 -- These are the default laws, they're unchangeable in-game.
 GM.Config.DefaultLaws = {
-	"Do not attack other citizens except in self-defence.",
-	"Do not steal or break in to peoples homes.",
-	"Money printers/drugs are illegal."
 }
 
 GM.Config.PocketBlacklist = {
@@ -335,6 +332,14 @@ GM.Config.PocketBlacklist = {
 	["prop_physics"] = true,
 	["money_printer"] = true,
 	["gunlab"] = true,
+    ["amateur_printer"] = true,
+    ["consumer_printer"] = true,
+    ["hp_printer"] = true,
+    ["nuclear_printer"] = true,
+    ["basic_heat_exchanger"] = true,
+    ["advanced_heat_exchanger"] = true,
+    ["pistol_gunlab"] = true,
+    ["smg_gunlab"] = true,
 }
 
 -- These weapons are classed as 'legal' in the weapon checker and are not stripped when confiscating weapons.
