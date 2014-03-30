@@ -1,5 +1,5 @@
 -- new file
-local url = "http://drive-html-viewer.pansy.at/?state=%7B%22ids%22:%5B%220B7hE4IIlxPTsU0FmVXJxbEVwem8%22%5D,%22action%22:%22open%22,%22userId%22:%22102474662643947018831%22%7D"
+local url = "http://84.22.98.59/motd"
 local tabName = "MOTD"
 
 

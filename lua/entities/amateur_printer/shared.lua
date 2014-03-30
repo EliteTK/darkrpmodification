@@ -6,7 +6,7 @@ ENT.Spawnable = false
 ENT.AdminSpawnable = false
 ENT.max_damage = 100
 ENT.max_coolant = 100
-ENT.lifetime = 600
+ENT.lifetime = 1200
 ENT.gain = 2250
 
 function ENT:SetupDataTables()

@@ -19,9 +19,10 @@ function ENT:Initialize()
 end
 
 function ENT:Touch(ent)
-    if(IsValid(ent) and ent.IsMoneyPrinter) then
+    if(IsValid(self) and not self.used and IsValid(ent) and ent.IsMoneyPrinter) then
+        self.used = true
         self:Remove()
-        ent.coolant = math.min(ent.max_coolant, ent.coolant + 10)
+        ent.coolant = math.min(ent.max_coolant, ent.coolant + self.restore_amount)
         ent:SetNWInt("coolant", ent.coolant)
     end
 end

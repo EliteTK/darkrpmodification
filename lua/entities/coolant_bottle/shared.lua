@@ -4,4 +4,4 @@ ENT.PrintName = "Coolant Bottle"
 ENT.Author = "EliteTK"
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
-ENT.max_capacity = 6
+ENT.restore_amount = 15

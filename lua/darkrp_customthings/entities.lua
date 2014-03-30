@@ -111,7 +111,7 @@ Printer kits
 DarkRP.createEntity("Printer Repair Kit", {
     ent = "repair_kit",
     model = "models/props_lab/reciever01d.mdl",
-    price = 200,
+    price = 800,
     max = 20,
     cmd = "buyrepair",
     buttonColor = Color(90, 90, 90, 255),
@@ -123,7 +123,7 @@ DarkRP.createEntity("Printer Repair Kit", {
 DarkRP.createEntity("Printer Coolant Bottle", {
     ent = "coolant_bottle",
     model = "models/props_junk/garbage_milkcarton001a.mdl",
-    price = 200,
+    price = 500,
     max = 20,
     cmd = "buycoolant",
     buttonColor = Color(0, 80, 170, 255),

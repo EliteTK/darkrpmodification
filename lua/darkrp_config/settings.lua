@@ -68,7 +68,7 @@ GM.Config.deathpov 						= true
 -- decalcleaner - Enable/Disable clearing ever players decals.
 GM.Config.decalcleaner 					= false
 -- disallowClientsideScripts - Clientside scripts can be very useful for customizing the HUD or to aid in building. This option bans those scripts.
-GM.Config.disallowClientsideScripts		= false
+GM.Config.disallowClientsideScripts		= true
 -- doorwarrants - Enable/disable Warrant requirement to enter property.
 GM.Config.doorwarrants 					= true
 -- dropmoneyondeath - Enable/disable whether people drop money on death.
@@ -192,7 +192,7 @@ GM.Config.maxletters					= 10
 -- maxlotterycost - Maximum payment the mayor can set to join a lottery.
 GM.Config.maxlotterycost				= 250
 -- maxvehicles - Sets how many vehicles one can buy.
-GM.Config.maxvehicles					= 5
+GM.Config.maxvehicles					= 100
 -- microwavefoodcost - Sets the sale price of Microwave Food.
 GM.Config.microwavefoodcost				= 30
 -- minlotterycost - Minimum payment the mayor can set to join a lottery.

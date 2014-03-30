@@ -1360,3 +1360,35 @@ AddCustomShipment("Water", {
     onBought = function(ply, shipment, ent) end,
     getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end,
 })
+
+--[[
+-- Printer maintenance shipments.
+--]]
+
+AddCustomShipment("Printer Repair Kit", {
+    model = "models/props_lab/reciever01d.mdl",
+    entity = "repair_kit",
+    price = 7200,
+    amount = 10,
+    separate = false,
+    pricesep = 0,
+    noship = false,
+    allowed = {TEAM_TECH},
+    buttonColor = Color(90, 90, 90, 255),
+    label = "Printer Repair Kits",
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end
+})
+
+AddCustomShipment("Printer Coolant Bottle", {
+    model = "models/props_junk/garbage_milkcarton001a.mdl",
+    entity = "coolant_bottle",
+    price = 4500,
+    amount = 10,
+    separate = false,
+    pricesep = 0,
+    noship = false,
+    allowed = {TEAM_TECH},
+    buttonColor = Color(0, 80, 170, 255),
+    label = "Printer Coolant Bottles",
+    getPrice = function(ply, price) return ply:GetUserGroup() == "donator" and price * 0.9 or price end
+})

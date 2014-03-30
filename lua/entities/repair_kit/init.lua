@@ -15,13 +15,16 @@ function ENT:Initialize()
     local phys = self:GetPhysicsObject()
     phys:Wake()
 
+    self.used = false
+
     self.RepairKit = true
 end
 
 function ENT:Touch(ent)
-    if(IsValid(ent) and (ent.IsMoneyPrinter or ent.IsHeatExchanger)) then
+    if(IsValid(self) and not self.used and IsValid(ent) and (ent.IsMoneyPrinter or ent.IsHeatExchanger)) then
+        self.used = true
         self:Remove()
-        ent.damage = math.min(ent.cmax_damage, ent.damage + 10)
+        ent.damage = math.min(ent.cmax_damage, ent.damage + self.restore_amount)
         ent:SetNWInt("health", ent.damage)
     end
 end
