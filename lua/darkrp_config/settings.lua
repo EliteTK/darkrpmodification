@@ -340,6 +340,7 @@ GM.Config.PocketBlacklist = {
     ["advanced_heat_exchanger"] = true,
     ["pistol_gunlab"] = true,
     ["smg_gunlab"] = true,
+--    ["m9k_ied"] - true -- TODO
 }
 
 -- These weapons are classed as 'legal' in the weapon checker and are not stripped when confiscating weapons.
