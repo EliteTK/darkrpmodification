@@ -4,6 +4,14 @@ default: https://github.com/FPtje/DarkRP/blob/master/gamemode/config/addentities
 examples: http://wiki.darkrp.com/index.php/DarkRP:CustomShipmentFields
 --]]
 
+local function Set (list)
+    local set = {}
+    for _, l in ipairs(list) do set[l] = true end
+    return set
+end
+
+local groups = Set {"donator", "trusted donator", "regular donator", "moderator donator", "admin donator", "superadmin"}
+
 
 --[[
 -- *******************
@@ -373,7 +381,7 @@ AddCustomShipment("Raging bull scoped", {
     weight = 15, 
     buttonColor = Color(255, 128, 0, 255), 
     label = "Raging bull scoped", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -500,7 +508,7 @@ AddCustomShipment("Magpul PDR", {
     weight = 15, 
     buttonColor = Color(80, 80, 255, 255), 
     label = "Magpul PDR", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -520,7 +528,7 @@ AddCustomShipment("Honeybadger", {
     weight = 15, 
     buttonColor = Color(114, 0, 191, 255), 
     label = "Honeybadger", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -540,7 +548,7 @@ AddCustomShipment("KRISS vector", {
     weight = 15, 
     buttonColor = Color(80, 80, 255, 255), 
     label = "KRISS vector", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -560,7 +568,7 @@ AddCustomShipment("Bizon PP19", {
     weight = 15, 
     buttonColor = Color(80, 80, 255, 255), 
     label = "Bizon PP19", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -707,7 +715,7 @@ AddCustomShipment("TAR21", {
     weight = 15, 
     buttonColor = Color(114, 0, 191, 255), 
     label = "TAR21", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -727,7 +735,7 @@ AddCustomShipment("L85", {
     weight = 15, 
     buttonColor = Color(114, 0, 191, 255), 
     label = "L85", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -747,7 +755,7 @@ AddCustomShipment("M16A4", {
     weight = 15, 
     buttonColor = Color(114, 0, 191, 255), 
     label = "M16A4", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -767,7 +775,7 @@ AddCustomShipment("SCAR H", {
     weight = 15, 
     buttonColor = Color(114, 0, 191, 255), 
     label = "SCAR H",
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -837,7 +845,7 @@ AddCustomShipment("SPAS 12", {
     weight = 15, 
     buttonColor = Color(200, 25, 25, 255), 
     label = "SPAS 12", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -907,7 +915,7 @@ AddCustomShipment("SVT 40", {
     weight = 15, 
     buttonColor = Color(200, 200, 25, 255), 
     label = "SVT 40",
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -979,7 +987,7 @@ AddCustomShipment("M249", {
     weight = 15, 
     buttonColor = Color(114, 0, 191, 255), 
     label = "M249", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -1025,7 +1033,7 @@ AddCustomShipment("Fast Lockpick", {
     weight = 15,
     buttonColor = Color(88, 88, 88, 255), 
     label = "Fast lockpick", 
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
 
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,
@@ -1064,7 +1072,7 @@ AddCustomShipment("Silenced Keypad Cracker", {
     weight = 15,
     buttonColor = Color(88, 88, 88, 255),
     label = "Silenced Keypad Cracker",
-    customCheck = function(ply) return ply:IsUserGroup("donator") end,
+    customCheck = function(ply) return groups[ply:GetUserGroup()] end,
     
     shipmentClass = "spawned_shipment",
     onBought = function(ply, shipment, ent) end,

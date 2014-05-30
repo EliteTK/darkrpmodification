@@ -1,4 +1,4 @@
-local url = "http://www.sanger.dk/"
+local url = "http://sealandowlgaming.com/server/rules"
 local tabName = "Rules"
 
 

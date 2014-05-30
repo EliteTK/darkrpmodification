@@ -1,3 +1,11 @@
+local function Set (list)
+    local set = {}
+    for _, l in ipairs(list) do set[l] = true end
+    return set
+end
+
+local groups = Set {"donator", "trusted donator", "regular donator", "moderator donator", "admin donator", "superadmin"}
+
 local hideHUDElements = {
     -- if you DarkRP_HUD this to true, ALL of DarkRP's HUD will be disabled. That is the health bar and stuff,
     -- but also the agenda, the voice chat icons, lockdown text, player arrested text and the names above players' heads
@@ -183,7 +191,7 @@ local function DrawHUD()
 
     -- Salary
     local salary = (LocalPlayer():getDarkRPVar("salary") or 0)
-    if (LocalPlayer():GetUserGroup() == "donator") then
+    if (groups[LocalPlayer():GetUserGroup()]) then
         salary = math.ceil( salary * 1.5 )
     end
 

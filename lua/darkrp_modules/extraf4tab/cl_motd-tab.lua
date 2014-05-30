@@ -1,5 +1,5 @@
 -- new file
-local url = "http://84.22.98.59/motd"
+local url = "http://sealandowlgaming.com/server/motd"
 local tabName = "MOTD"
 
 
